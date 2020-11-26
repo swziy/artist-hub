@@ -1,0 +1,947 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E53883A256FB40200CFC66E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E538839256FB40200CFC66E /* AppDelegate.swift */; };
+		3E538843256FB40300CFC66E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E538842256FB40300CFC66E /* Assets.xcassets */; };
+		3E538846256FB40300CFC66E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E538844256FB40300CFC66E /* LaunchScreen.storyboard */; };
+		3E538851256FB40300CFC66E /* ArtistHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E538850256FB40300CFC66E /* ArtistHubTests.swift */; };
+		3E53885C256FB40300CFC66E /* ArtistHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E53885B256FB40300CFC66E /* ArtistHubUITests.swift */; };
+		3E5388A2256FCABD00CFC66E /* ArtistHubCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E538899256FCABD00CFC66E /* ArtistHubCore.framework */; };
+		3E5388A7256FCABD00CFC66E /* ArtistHubCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5388A6256FCABD00CFC66E /* ArtistHubCoreTests.swift */; };
+		3E5388A9256FCABD00CFC66E /* ArtistHubCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E53889B256FCABD00CFC66E /* ArtistHubCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E5388CA256FCC1100CFC66E /* ArtistHubCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E538899256FCABD00CFC66E /* ArtistHubCore.framework */; };
+		3E5388CB256FCC1100CFC66E /* ArtistHubCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E538899256FCABD00CFC66E /* ArtistHubCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E53884D256FB40300CFC66E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E53882E256FB40200CFC66E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E538835256FB40200CFC66E;
+			remoteInfo = ArtistHub;
+		};
+		3E538858256FB40300CFC66E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E53882E256FB40200CFC66E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E538835256FB40200CFC66E;
+			remoteInfo = ArtistHub;
+		};
+		3E5388A3256FCABD00CFC66E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E53882E256FB40200CFC66E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E538898256FCABD00CFC66E;
+			remoteInfo = ArtistHubCore;
+		};
+		3E5388CC256FCC1100CFC66E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E53882E256FB40200CFC66E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E538898256FCABD00CFC66E;
+			remoteInfo = ArtistHubCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3E5388CE256FCC1200CFC66E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3E5388CB256FCC1100CFC66E /* ArtistHubCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3E538836256FB40200CFC66E /* ArtistHubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtistHubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E538839256FB40200CFC66E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E538842256FB40300CFC66E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E538845256FB40300CFC66E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E538847256FB40300CFC66E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E53884C256FB40300CFC66E /* ArtistHubAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtistHubAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E538850256FB40300CFC66E /* ArtistHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistHubTests.swift; sourceTree = "<group>"; };
+		3E538852256FB40300CFC66E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E538857256FB40300CFC66E /* ArtistHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtistHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E53885B256FB40300CFC66E /* ArtistHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistHubUITests.swift; sourceTree = "<group>"; };
+		3E53885D256FB40300CFC66E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E538899256FCABD00CFC66E /* ArtistHubCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArtistHubCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E53889B256FCABD00CFC66E /* ArtistHubCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistHubCore.h; sourceTree = "<group>"; };
+		3E53889C256FCABD00CFC66E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E5388A1256FCABD00CFC66E /* ArtistHubCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtistHubCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E5388A6256FCABD00CFC66E /* ArtistHubCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistHubCoreTests.swift; sourceTree = "<group>"; };
+		3E5388A8256FCABD00CFC66E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E538833256FB40200CFC66E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E5388CA256FCC1100CFC66E /* ArtistHubCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E538849256FB40300CFC66E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E538854256FB40300CFC66E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E538896256FCABD00CFC66E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E53889E256FCABD00CFC66E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E5388A2256FCABD00CFC66E /* ArtistHubCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E53882D256FB40200CFC66E = {
+			isa = PBXGroup;
+			children = (
+				3E538838256FB40200CFC66E /* ArtistHubApp */,
+				3E53889A256FCABD00CFC66E /* ArtistHubCore */,
+				3E53885A256FB40300CFC66E /* ArtistHubUITests */,
+				3E538837256FB40200CFC66E /* Products */,
+				3E5388C9256FCC1100CFC66E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3E538837256FB40200CFC66E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E538836256FB40200CFC66E /* ArtistHubApp.app */,
+				3E53884C256FB40300CFC66E /* ArtistHubAppTests.xctest */,
+				3E538857256FB40300CFC66E /* ArtistHubUITests.xctest */,
+				3E538899256FCABD00CFC66E /* ArtistHubCore.framework */,
+				3E5388A1256FCABD00CFC66E /* ArtistHubCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E538838256FB40200CFC66E /* ArtistHubApp */ = {
+			isa = PBXGroup;
+			children = (
+				3E53887E256FC89300CFC66E /* Sources */,
+				3E53887F256FC89900CFC66E /* Tests */,
+				3E538881256FC8F900CFC66E /* Resources */,
+			);
+			path = ArtistHubApp;
+			sourceTree = "<group>";
+		};
+		3E53885A256FB40300CFC66E /* ArtistHubUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3E53885B256FB40300CFC66E /* ArtistHubUITests.swift */,
+				3E53885D256FB40300CFC66E /* Info.plist */,
+			);
+			path = ArtistHubUITests;
+			sourceTree = "<group>";
+		};
+		3E53887E256FC89300CFC66E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3E53888D256FC98900CFC66E /* Application */,
+				3E538882256FC92900CFC66E /* LaunchScreen */,
+				3E538880256FC8AE00CFC66E /* Supporting Files */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3E53887F256FC89900CFC66E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3E538850256FB40300CFC66E /* ArtistHubTests.swift */,
+				3E5388C3256FCB5B00CFC66E /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		3E538880256FC8AE00CFC66E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E538847256FB40300CFC66E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E538881256FC8F900CFC66E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E538842256FB40300CFC66E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3E538882256FC92900CFC66E /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3E538883256FC93500CFC66E /* View */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		3E538883256FC93500CFC66E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E538844256FB40300CFC66E /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E53888D256FC98900CFC66E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3E538839256FB40200CFC66E /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3E53889A256FCABD00CFC66E /* ArtistHubCore */ = {
+			isa = PBXGroup;
+			children = (
+				3E5388BF256FCAFD00CFC66E /* Sources */,
+				3E5388C0256FCB0900CFC66E /* Tests */,
+			);
+			path = ArtistHubCore;
+			sourceTree = "<group>";
+		};
+		3E5388BF256FCAFD00CFC66E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3E5388C1256FCB1900CFC66E /* Supporting Files */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3E5388C0256FCB0900CFC66E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3E5388A6256FCABD00CFC66E /* ArtistHubCoreTests.swift */,
+				3E5388C2256FCB4A00CFC66E /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		3E5388C1256FCB1900CFC66E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E53889B256FCABD00CFC66E /* ArtistHubCore.h */,
+				3E53889C256FCABD00CFC66E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E5388C2256FCB4A00CFC66E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E5388A8256FCABD00CFC66E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E5388C3256FCB5B00CFC66E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E538852256FB40300CFC66E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E5388C9256FCC1100CFC66E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3E538894256FCABD00CFC66E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E5388A9256FCABD00CFC66E /* ArtistHubCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3E538835256FB40200CFC66E /* ArtistHubApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E538860256FB40300CFC66E /* Build configuration list for PBXNativeTarget "ArtistHubApp" */;
+			buildPhases = (
+				3E538832256FB40200CFC66E /* Sources */,
+				3E538833256FB40200CFC66E /* Frameworks */,
+				3E538834256FB40200CFC66E /* Resources */,
+				3E5388CE256FCC1200CFC66E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E5388CD256FCC1100CFC66E /* PBXTargetDependency */,
+			);
+			name = ArtistHubApp;
+			productName = ArtistHub;
+			productReference = 3E538836256FB40200CFC66E /* ArtistHubApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E53884B256FB40300CFC66E /* ArtistHubAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E538863256FB40300CFC66E /* Build configuration list for PBXNativeTarget "ArtistHubAppTests" */;
+			buildPhases = (
+				3E538848256FB40300CFC66E /* Sources */,
+				3E538849256FB40300CFC66E /* Frameworks */,
+				3E53884A256FB40300CFC66E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E53884E256FB40300CFC66E /* PBXTargetDependency */,
+			);
+			name = ArtistHubAppTests;
+			productName = ArtistHubTests;
+			productReference = 3E53884C256FB40300CFC66E /* ArtistHubAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3E538856256FB40300CFC66E /* ArtistHubUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E538866256FB40300CFC66E /* Build configuration list for PBXNativeTarget "ArtistHubUITests" */;
+			buildPhases = (
+				3E538853256FB40300CFC66E /* Sources */,
+				3E538854256FB40300CFC66E /* Frameworks */,
+				3E538855256FB40300CFC66E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E538859256FB40300CFC66E /* PBXTargetDependency */,
+			);
+			name = ArtistHubUITests;
+			productName = ArtistHubUITests;
+			productReference = 3E538857256FB40300CFC66E /* ArtistHubUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		3E538898256FCABD00CFC66E /* ArtistHubCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E5388AA256FCABD00CFC66E /* Build configuration list for PBXNativeTarget "ArtistHubCore" */;
+			buildPhases = (
+				3E538894256FCABD00CFC66E /* Headers */,
+				3E538895256FCABD00CFC66E /* Sources */,
+				3E538896256FCABD00CFC66E /* Frameworks */,
+				3E538897256FCABD00CFC66E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArtistHubCore;
+			productName = ArtistHubCore;
+			productReference = 3E538899256FCABD00CFC66E /* ArtistHubCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3E5388A0256FCABD00CFC66E /* ArtistHubCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E5388AD256FCABD00CFC66E /* Build configuration list for PBXNativeTarget "ArtistHubCoreTests" */;
+			buildPhases = (
+				3E53889D256FCABD00CFC66E /* Sources */,
+				3E53889E256FCABD00CFC66E /* Frameworks */,
+				3E53889F256FCABD00CFC66E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E5388A4256FCABD00CFC66E /* PBXTargetDependency */,
+			);
+			name = ArtistHubCoreTests;
+			productName = ArtistHubCoreTests;
+			productReference = 3E5388A1256FCABD00CFC66E /* ArtistHubCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E53882E256FB40200CFC66E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					3E538835256FB40200CFC66E = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					3E53884B256FB40300CFC66E = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 3E538835256FB40200CFC66E;
+					};
+					3E538856256FB40300CFC66E = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 3E538835256FB40200CFC66E;
+					};
+					3E538898256FCABD00CFC66E = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					3E5388A0256FCABD00CFC66E = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 3E538831256FB40200CFC66E /* Build configuration list for PBXProject "ArtistHub" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E53882D256FB40200CFC66E;
+			productRefGroup = 3E538837256FB40200CFC66E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E538835256FB40200CFC66E /* ArtistHubApp */,
+				3E53884B256FB40300CFC66E /* ArtistHubAppTests */,
+				3E538898256FCABD00CFC66E /* ArtistHubCore */,
+				3E5388A0256FCABD00CFC66E /* ArtistHubCoreTests */,
+				3E538856256FB40300CFC66E /* ArtistHubUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E538834256FB40200CFC66E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E538846256FB40300CFC66E /* LaunchScreen.storyboard in Resources */,
+				3E538843256FB40300CFC66E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E53884A256FB40300CFC66E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E538855256FB40300CFC66E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E538897256FCABD00CFC66E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E53889F256FCABD00CFC66E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E538832256FB40200CFC66E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E53883A256FB40200CFC66E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E538848256FB40300CFC66E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E538851256FB40300CFC66E /* ArtistHubTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E538853256FB40300CFC66E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E53885C256FB40300CFC66E /* ArtistHubUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E538895256FCABD00CFC66E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E53889D256FCABD00CFC66E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E5388A7256FCABD00CFC66E /* ArtistHubCoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E53884E256FB40300CFC66E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E538835256FB40200CFC66E /* ArtistHubApp */;
+			targetProxy = 3E53884D256FB40300CFC66E /* PBXContainerItemProxy */;
+		};
+		3E538859256FB40300CFC66E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E538835256FB40200CFC66E /* ArtistHubApp */;
+			targetProxy = 3E538858256FB40300CFC66E /* PBXContainerItemProxy */;
+		};
+		3E5388A4256FCABD00CFC66E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E538898256FCABD00CFC66E /* ArtistHubCore */;
+			targetProxy = 3E5388A3256FCABD00CFC66E /* PBXContainerItemProxy */;
+		};
+		3E5388CD256FCC1100CFC66E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E538898256FCABD00CFC66E /* ArtistHubCore */;
+			targetProxy = 3E5388CC256FCC1100CFC66E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E538844256FB40300CFC66E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E538845256FB40300CFC66E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E53885E256FB40300CFC66E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3E53885F256FB40300CFC66E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E538861256FB40300CFC66E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPFPRP3P33;
+				INFOPLIST_FILE = "ArtistHubApp/Sources/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swziy.ArtistHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3E538862256FB40300CFC66E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPFPRP3P33;
+				INFOPLIST_FILE = "ArtistHubApp/Sources/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swziy.ArtistHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3E538864256FB40300CFC66E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPFPRP3P33;
+				INFOPLIST_FILE = "ArtistHubApp/Tests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swziy.ArtistHubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtistHubApp.app/ArtistHubApp";
+			};
+			name = Debug;
+		};
+		3E538865256FB40300CFC66E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPFPRP3P33;
+				INFOPLIST_FILE = "ArtistHubApp/Tests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swziy.ArtistHubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtistHubApp.app/ArtistHubApp";
+			};
+			name = Release;
+		};
+		3E538867256FB40300CFC66E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPFPRP3P33;
+				INFOPLIST_FILE = ArtistHubUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swziy.ArtistHubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArtistHub;
+			};
+			name = Debug;
+		};
+		3E538868256FB40300CFC66E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPFPRP3P33;
+				INFOPLIST_FILE = ArtistHubUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swziy.ArtistHubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArtistHub;
+			};
+			name = Release;
+		};
+		3E5388AB256FCABD00CFC66E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CPFPRP3P33;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ArtistHubCore/Sources/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swziy.ArtistHubCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3E5388AC256FCABD00CFC66E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CPFPRP3P33;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ArtistHubCore/Sources/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swziy.ArtistHubCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E5388AE256FCABD00CFC66E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPFPRP3P33;
+				INFOPLIST_FILE = "ArtistHubCore/Tests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swziy.ArtistHubCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E5388AF256FCABD00CFC66E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPFPRP3P33;
+				INFOPLIST_FILE = "ArtistHubCore/Tests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swziy.ArtistHubCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E538831256FB40200CFC66E /* Build configuration list for PBXProject "ArtistHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E53885E256FB40300CFC66E /* Debug */,
+				3E53885F256FB40300CFC66E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E538860256FB40300CFC66E /* Build configuration list for PBXNativeTarget "ArtistHubApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E538861256FB40300CFC66E /* Debug */,
+				3E538862256FB40300CFC66E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E538863256FB40300CFC66E /* Build configuration list for PBXNativeTarget "ArtistHubAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E538864256FB40300CFC66E /* Debug */,
+				3E538865256FB40300CFC66E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E538866256FB40300CFC66E /* Build configuration list for PBXNativeTarget "ArtistHubUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E538867256FB40300CFC66E /* Debug */,
+				3E538868256FB40300CFC66E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E5388AA256FCABD00CFC66E /* Build configuration list for PBXNativeTarget "ArtistHubCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E5388AB256FCABD00CFC66E /* Debug */,
+				3E5388AC256FCABD00CFC66E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E5388AD256FCABD00CFC66E /* Build configuration list for PBXNativeTarget "ArtistHubCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E5388AE256FCABD00CFC66E /* Debug */,
+				3E5388AF256FCABD00CFC66E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E53882E256FB40200CFC66E /* Project object */;
+}

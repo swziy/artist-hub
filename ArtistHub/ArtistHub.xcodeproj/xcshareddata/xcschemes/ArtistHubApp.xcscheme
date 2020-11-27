@@ -48,6 +48,16 @@
                ReferencedContainer = "container:ArtistHub.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3E5DF9AD2571279C00C0F6FA"
+               BuildableName = "ArtistHubUserInterfaceTests.xctest"
+               BlueprintName = "ArtistHubUserInterfaceTests"
+               ReferencedContainer = "container:ArtistHub.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

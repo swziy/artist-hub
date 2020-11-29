@@ -3,7 +3,7 @@ import UIKit
 
 class ApplicationRouterSpy: ApplicationRouterType {
 
-    var routeToMainScreenInvoked: [UIWindow] = []
+    private(set) var routeToMainScreenInvoked: [UIWindow] = []
 
     // MARK: - ApplicationRouterType
 

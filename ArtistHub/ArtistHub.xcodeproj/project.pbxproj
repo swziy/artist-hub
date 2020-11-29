@@ -19,12 +19,35 @@
 		3E5388A9256FCABD00CFC66E /* ArtistHubCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E53889B256FCABD00CFC66E /* ArtistHubCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E5388CA256FCC1100CFC66E /* ArtistHubCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E538899256FCABD00CFC66E /* ArtistHubCore.framework */; };
 		3E5388CB256FCC1100CFC66E /* ArtistHubCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E538899256FCABD00CFC66E /* ArtistHubCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E5DEF0A2573CCF2003CF008 /* ListRouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF092573CCF2003CF008 /* ListRouterFactory.swift */; };
+		3E5DEF162573CDF6003CF008 /* DetailsRouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF152573CDF6003CF008 /* DetailsRouterType.swift */; };
+		3E5DEF1E2573CE01003CF008 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF1D2573CE01003CF008 /* DetailsRouter.swift */; };
+		3E5DEF272573CED4003CF008 /* ListControllerFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF262573CED4003CF008 /* ListControllerFactoryType.swift */; };
+		3E5DEF3B2573D034003CF008 /* DetailsRouterFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF3A2573D034003CF008 /* DetailsRouterFactoryType.swift */; };
+		3E5DEF432573D06B003CF008 /* DetailsRouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF422573D06B003CF008 /* DetailsRouterFactory.swift */; };
+		3E5DEF4B2573D116003CF008 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF4A2573D116003CF008 /* DetailsViewController.swift */; };
+		3E5DEF542573D145003CF008 /* DetailsControllerFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF532573D145003CF008 /* DetailsControllerFactoryType.swift */; };
+		3E5DEF5C2573D311003CF008 /* DetailsControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF5B2573D311003CF008 /* DetailsControllerFactory.swift */; };
+		3E5DEF642573D368003CF008 /* ListControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF632573D368003CF008 /* ListControllerFactory.swift */; };
+		3E5DEF6D2573D404003CF008 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF6C2573D404003CF008 /* DetailsView.swift */; };
+		3E5DEF752573D6AB003CF008 /* ListRouterFactorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF742573D6AB003CF008 /* ListRouterFactorySpy.swift */; };
+		3E5DEF842573D76A003CF008 /* ListRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF7C2573D758003CF008 /* ListRouterSpy.swift */; };
+		3E5DEF9B2573DB08003CF008 /* ListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEF932573DADB003CF008 /* ListRouterTests.swift */; };
+		3E5DEFA92573DC09003CF008 /* ListControllerFactorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEFA82573DC09003CF008 /* ListControllerFactorySpy.swift */; };
+		3E5DEFB12573DCC9003CF008 /* DetailsRouterFactorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEFB02573DCC9003CF008 /* DetailsRouterFactorySpy.swift */; };
+		3E5DEFB92573DD78003CF008 /* DetailsRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEFB82573DD78003CF008 /* DetailsRouterSpy.swift */; };
+		3E5DEFC22573E414003CF008 /* ListRouterFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DEFC12573E414003CF008 /* ListRouterFactoryTests.swift */; };
 		3E5DF9AF2571279C00C0F6FA /* ArtistHubUserInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5DF9A62571279C00C0F6FA /* ArtistHubUserInterface.framework */; };
 		3E5DF9B82571279C00C0F6FA /* ArtistHubUserInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E5DF9A82571279C00C0F6FA /* ArtistHubUserInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E5DF9BB2571279C00C0F6FA /* ArtistHubUserInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5DF9A62571279C00C0F6FA /* ArtistHubUserInterface.framework */; };
 		3E5DF9BC2571279C00C0F6FA /* ArtistHubUserInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5DF9A62571279C00C0F6FA /* ArtistHubUserInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3EA095672571506400AA6AAB /* ApplicationRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA095662571506400AA6AAB /* ApplicationRouterSpy.swift */; };
 		3EA095782571553600AA6AAB /* ApplicationRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA095762571553600AA6AAB /* ApplicationRouterTests.swift */; };
+		3EA0958825715C4E00AA6AAB /* ListRouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0958725715C4E00AA6AAB /* ListRouterType.swift */; };
+		3EA0959725715CC500AA6AAB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0959625715CC500AA6AAB /* ListViewController.swift */; };
+		3EA0959F25715D0500AA6AAB /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0959E25715D0500AA6AAB /* ListRouter.swift */; };
+		3EA095A725715F0E00AA6AAB /* UINavigationController+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA095A625715F0E00AA6AAB /* UINavigationController+Default.swift */; };
+		3EA095AF2573CBFE00AA6AAB /* ListRouterFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */; };
 		3EB76F0A2571486400DFDD0A /* UIWindowDefaultExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */; };
 		3EB76F2C25714CD800DFDD0A /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */; };
 /* End PBXBuildFile section */
@@ -116,6 +139,24 @@
 		3E5388A1256FCABD00CFC66E /* ArtistHubCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtistHubCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E5388A6256FCABD00CFC66E /* ArtistHubCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistHubCoreTests.swift; sourceTree = "<group>"; };
 		3E5388A8256FCABD00CFC66E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E5DEF092573CCF2003CF008 /* ListRouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterFactory.swift; sourceTree = "<group>"; };
+		3E5DEF152573CDF6003CF008 /* DetailsRouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterType.swift; sourceTree = "<group>"; };
+		3E5DEF1D2573CE01003CF008 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		3E5DEF262573CED4003CF008 /* ListControllerFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListControllerFactoryType.swift; sourceTree = "<group>"; };
+		3E5DEF3A2573D034003CF008 /* DetailsRouterFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterFactoryType.swift; sourceTree = "<group>"; };
+		3E5DEF422573D06B003CF008 /* DetailsRouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterFactory.swift; sourceTree = "<group>"; };
+		3E5DEF4A2573D116003CF008 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		3E5DEF532573D145003CF008 /* DetailsControllerFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsControllerFactoryType.swift; sourceTree = "<group>"; };
+		3E5DEF5B2573D311003CF008 /* DetailsControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsControllerFactory.swift; sourceTree = "<group>"; };
+		3E5DEF632573D368003CF008 /* ListControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListControllerFactory.swift; sourceTree = "<group>"; };
+		3E5DEF6C2573D404003CF008 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		3E5DEF742573D6AB003CF008 /* ListRouterFactorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterFactorySpy.swift; sourceTree = "<group>"; };
+		3E5DEF7C2573D758003CF008 /* ListRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterSpy.swift; sourceTree = "<group>"; };
+		3E5DEF932573DADB003CF008 /* ListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterTests.swift; sourceTree = "<group>"; };
+		3E5DEFA82573DC09003CF008 /* ListControllerFactorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListControllerFactorySpy.swift; sourceTree = "<group>"; };
+		3E5DEFB02573DCC9003CF008 /* DetailsRouterFactorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterFactorySpy.swift; sourceTree = "<group>"; };
+		3E5DEFB82573DD78003CF008 /* DetailsRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterSpy.swift; sourceTree = "<group>"; };
+		3E5DEFC12573E414003CF008 /* ListRouterFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterFactoryTests.swift; sourceTree = "<group>"; };
 		3E5DF9A62571279C00C0F6FA /* ArtistHubUserInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArtistHubUserInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E5DF9A82571279C00C0F6FA /* ArtistHubUserInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistHubUserInterface.h; sourceTree = "<group>"; };
 		3E5DF9A92571279C00C0F6FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +164,11 @@
 		3E5DF9B72571279C00C0F6FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EA095662571506400AA6AAB /* ApplicationRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouterSpy.swift; sourceTree = "<group>"; };
 		3EA095762571553600AA6AAB /* ApplicationRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouterTests.swift; sourceTree = "<group>"; };
+		3EA0958725715C4E00AA6AAB /* ListRouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterType.swift; sourceTree = "<group>"; };
+		3EA0959625715CC500AA6AAB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		3EA0959E25715D0500AA6AAB /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		3EA095A625715F0E00AA6AAB /* UINavigationController+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Default.swift"; sourceTree = "<group>"; };
+		3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterFactoryType.swift; sourceTree = "<group>"; };
 		3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowDefaultExtensionTests.swift; sourceTree = "<group>"; };
 		3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				3E4A805E257145FD0021312B /* UIWindow+Default.swift */,
+				3EA095A625715F0E00AA6AAB /* UINavigationController+Default.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -258,6 +305,8 @@
 			isa = PBXGroup;
 			children = (
 				3E53888D256FC98900CFC66E /* Application */,
+				3EA0958525715B4F00AA6AAB /* List */,
+				3E5DEF112573CD98003CF008 /* Details */,
 				3E538882256FC92900CFC66E /* LaunchScreen */,
 				3E538880256FC8AE00CFC66E /* Supporting Files */,
 			);
@@ -268,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				3EA09574257154F700AA6AAB /* Application */,
+				3E5DEF912573DA6F003CF008 /* List */,
 				3EA095642571502E00AA6AAB /* Doubles */,
 				3E5388C3256FCB5B00CFC66E /* Supporting Files */,
 			);
@@ -373,6 +423,95 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3E5DEF112573CD98003CF008 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DEF122573CDC4003CF008 /* Controller */,
+				3E5DEF132573CDC8003CF008 /* Router */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		3E5DEF122573CDC4003CF008 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DEF6B2573D3FA003CF008 /* View */,
+				3E5DEF522573D12B003CF008 /* Factory */,
+				3E5DEF4A2573D116003CF008 /* DetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3E5DEF132573CDC8003CF008 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DEF142573CDE2003CF008 /* Factory */,
+				3E5DEF152573CDF6003CF008 /* DetailsRouterType.swift */,
+				3E5DEF1D2573CE01003CF008 /* DetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3E5DEF142573CDE2003CF008 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DEF3A2573D034003CF008 /* DetailsRouterFactoryType.swift */,
+				3E5DEF422573D06B003CF008 /* DetailsRouterFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3E5DEF252573CEC8003CF008 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DEF262573CED4003CF008 /* ListControllerFactoryType.swift */,
+				3E5DEF632573D368003CF008 /* ListControllerFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3E5DEF522573D12B003CF008 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DEF532573D145003CF008 /* DetailsControllerFactoryType.swift */,
+				3E5DEF5B2573D311003CF008 /* DetailsControllerFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3E5DEF6B2573D3FA003CF008 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DEF6C2573D404003CF008 /* DetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E5DEF912573DA6F003CF008 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DEF922573DAB9003CF008 /* Router */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		3E5DEF922573DAB9003CF008 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DEFC02573E3EC003CF008 /* Factory */,
+				3E5DEF932573DADB003CF008 /* ListRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3E5DEFC02573E3EC003CF008 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DEFC12573E414003CF008 /* ListRouterFactoryTests.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		3E5DF9A72571279C00C0F6FA /* ArtistHubUserInterface */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +568,11 @@
 			isa = PBXGroup;
 			children = (
 				3EA095662571506400AA6AAB /* ApplicationRouterSpy.swift */,
+				3E5DEF742573D6AB003CF008 /* ListRouterFactorySpy.swift */,
+				3E5DEF7C2573D758003CF008 /* ListRouterSpy.swift */,
+				3E5DEFA82573DC09003CF008 /* ListControllerFactorySpy.swift */,
+				3E5DEFB02573DCC9003CF008 /* DetailsRouterFactorySpy.swift */,
+				3E5DEFB82573DD78003CF008 /* DetailsRouterSpy.swift */,
 			);
 			path = Spy;
 			sourceTree = "<group>";
@@ -448,6 +592,43 @@
 				3EA095762571553600AA6AAB /* ApplicationRouterTests.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		3EA0958525715B4F00AA6AAB /* List */ = {
+			isa = PBXGroup;
+			children = (
+				3EA0959525715C9C00AA6AAB /* Controller */,
+				3EA0958625715BD000AA6AAB /* Router */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		3EA0958625715BD000AA6AAB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3EA095B62573CC0600AA6AAB /* Factory */,
+				3EA0958725715C4E00AA6AAB /* ListRouterType.swift */,
+				3EA0959E25715D0500AA6AAB /* ListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3EA0959525715C9C00AA6AAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DEF252573CEC8003CF008 /* Factory */,
+				3EA0959625715CC500AA6AAB /* ListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3EA095B62573CC0600AA6AAB /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */,
+				3E5DEF092573CCF2003CF008 /* ListRouterFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		3EB76F11257148B300DFDD0A /* Extension */ = {
@@ -736,9 +917,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA095AF2573CBFE00AA6AAB /* ListRouterFactoryType.swift in Sources */,
+				3EA0959F25715D0500AA6AAB /* ListRouter.swift in Sources */,
+				3E5DEF432573D06B003CF008 /* DetailsRouterFactory.swift in Sources */,
 				3E53883A256FB40200CFC66E /* AppDelegate.swift in Sources */,
+				3E5DEF642573D368003CF008 /* ListControllerFactory.swift in Sources */,
+				3E5DEF1E2573CE01003CF008 /* DetailsRouter.swift in Sources */,
 				3E279DC92571151800144915 /* ApplicationRouter.swift in Sources */,
+				3E5DEF162573CDF6003CF008 /* DetailsRouterType.swift in Sources */,
+				3E5DEF542573D145003CF008 /* DetailsControllerFactoryType.swift in Sources */,
+				3E5DEF3B2573D034003CF008 /* DetailsRouterFactoryType.swift in Sources */,
+				3EA0958825715C4E00AA6AAB /* ListRouterType.swift in Sources */,
+				3E5DEF6D2573D404003CF008 /* DetailsView.swift in Sources */,
+				3EA0959725715CC500AA6AAB /* ListViewController.swift in Sources */,
+				3E5DEF5C2573D311003CF008 /* DetailsControllerFactory.swift in Sources */,
 				3E279DD42571157000144915 /* ApplicationRouterType.swift in Sources */,
+				3E5DEF4B2573D116003CF008 /* DetailsViewController.swift in Sources */,
+				3E5DEF272573CED4003CF008 /* ListControllerFactoryType.swift in Sources */,
+				3E5DEF0A2573CCF2003CF008 /* ListRouterFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,7 +943,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EA095672571506400AA6AAB /* ApplicationRouterSpy.swift in Sources */,
+				3E5DEFA92573DC09003CF008 /* ListControllerFactorySpy.swift in Sources */,
+				3E5DEF842573D76A003CF008 /* ListRouterSpy.swift in Sources */,
+				3E5DEFC22573E414003CF008 /* ListRouterFactoryTests.swift in Sources */,
+				3E5DEFB12573DCC9003CF008 /* DetailsRouterFactorySpy.swift in Sources */,
 				3EA095782571553600AA6AAB /* ApplicationRouterTests.swift in Sources */,
+				3E5DEF752573D6AB003CF008 /* ListRouterFactorySpy.swift in Sources */,
+				3E5DEF9B2573DB08003CF008 /* ListRouterTests.swift in Sources */,
+				3E5DEFB92573DD78003CF008 /* DetailsRouterSpy.swift in Sources */,
 				3EB76F2C25714CD800DFDD0A /* AppDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -780,6 +983,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E4A805F257145FD0021312B /* UIWindow+Default.swift in Sources */,
+				3EA095A725715F0E00AA6AAB /* UINavigationController+Default.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Initialization
 
     override init() {
-        let navigationController = UINavigationController()
-        router = ApplicationRouter(navigationController: navigationController)
+        router = ApplicationRouter(
+            navigationController: UINavigationController.default,
+            listRouterFactory: ListRouterFactory()
+        )
     }
 
     // MARK: - UIApplicationDelegate

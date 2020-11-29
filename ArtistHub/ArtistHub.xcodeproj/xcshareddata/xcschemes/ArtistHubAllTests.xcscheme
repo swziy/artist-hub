@@ -26,7 +26,32 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3E538835256FB40200CFC66E"
+            BuildableName = "ArtistHubApp.app"
+            BlueprintName = "ArtistHubApp"
+            ReferencedContainer = "container:ArtistHub.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3E538898256FCABD00CFC66E"
+            BuildableName = "ArtistHubCore.framework"
+            BlueprintName = "ArtistHubCore"
+            ReferencedContainer = "container:ArtistHub.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3E5DF9A52571279C00C0F6FA"
+            BuildableName = "ArtistHubUserInterface.framework"
+            BlueprintName = "ArtistHubUserInterface"
+            ReferencedContainer = "container:ArtistHub.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">

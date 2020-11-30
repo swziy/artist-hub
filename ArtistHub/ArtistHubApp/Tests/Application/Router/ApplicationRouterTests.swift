@@ -3,20 +3,20 @@ import XCTest
 
 class ApplicationRouterTests: XCTestCase {
 
-    var navigationController: UINavigationController!
+    var navigationControllerSpy: NavigationControllerSpy!
     var listRouterFactorySpy: ListRouterFactorySpy!
     var sut: ApplicationRouter!
 
     override func setUp() {
         super.setUp()
-        navigationController = UINavigationController()
+        navigationControllerSpy = NavigationControllerSpy()
         listRouterFactorySpy = ListRouterFactorySpy()
-        sut = ApplicationRouter(navigationController: navigationController, listRouterFactory: listRouterFactorySpy)
+        sut = ApplicationRouter(navigationController: navigationControllerSpy, listRouterFactory: listRouterFactorySpy)
     }
 
     override func tearDown() {
         super.tearDown()
-        navigationController = nil
+        navigationControllerSpy = nil
         listRouterFactorySpy = nil
         sut = nil
     }
@@ -25,7 +25,7 @@ class ApplicationRouterTests: XCTestCase {
         let window = UIWindow()
         sut.routeToMainScreen(in: window)
 
-        XCTAssertEqual(window.rootViewController, navigationController)
+        XCTAssertEqual(window.rootViewController, navigationControllerSpy)
     }
 
     func test_whenRoutingInvoked_shouldCreateListRouter() {
@@ -40,6 +40,6 @@ class ApplicationRouterTests: XCTestCase {
         sut.routeToMainScreen(in: window)
         
         XCTAssertEqual(listRouterFactorySpy.listRouterSpy.invokedNavigateToListScreen.count, 1)
-        XCTAssertEqual(listRouterFactorySpy.listRouterSpy.invokedNavigateToListScreen.first, navigationController)
+        XCTAssertEqual(listRouterFactorySpy.listRouterSpy.invokedNavigateToListScreen.first, navigationControllerSpy)
     }
 }

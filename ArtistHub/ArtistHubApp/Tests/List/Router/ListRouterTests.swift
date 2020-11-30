@@ -3,14 +3,14 @@ import XCTest
 
 class ListRouterTests: XCTestCase {
 
-    var navigationController: UINavigationController!
+    var navigationControllerSpy: NavigationControllerSpy!
     var controllerFactorySpy: ListControllerFactorySpy!
     var detailsRouterFactorySpy: DetailsRouterFactorySpy!
     var sut: ListRouter!
 
     override func setUp() {
         super.setUp()
-        navigationController = UINavigationController()
+        navigationControllerSpy = NavigationControllerSpy()
         controllerFactorySpy = ListControllerFactorySpy()
         detailsRouterFactorySpy = DetailsRouterFactorySpy()
         sut = ListRouter(controllerFactory: controllerFactorySpy, detailsRouterFactory: detailsRouterFactorySpy)
@@ -18,28 +18,28 @@ class ListRouterTests: XCTestCase {
 
     override func tearDown() {
         super.tearDown()
-        navigationController = nil
+        navigationControllerSpy = nil
         controllerFactorySpy = nil
         detailsRouterFactorySpy = nil
         sut = nil
     }
 
     func test_whenRoutingInvoked_shouldMakeListControllerAndSetupDelegate() {
-        sut.routeToListScreen(in: navigationController)
+        sut.routeToListScreen(in: navigationControllerSpy)
 
         XCTAssertEqual(controllerFactorySpy.invokedMakeListController, 1)
         XCTAssertTrue(controllerFactorySpy.stubbedController.delegate === sut)
     }
 
     func test_whenRoutingInvoked_shouldSetViewControllerAsNavigationRoot() {
-        sut.routeToListScreen(in: navigationController)
+        sut.routeToListScreen(in: navigationControllerSpy)
 
-        XCTAssertEqual(navigationController.viewControllers.count, 1)
-        XCTAssertEqual(navigationController.viewControllers.first, controllerFactorySpy.stubbedController)
+        XCTAssertEqual(navigationControllerSpy.viewControllers.count, 1)
+        XCTAssertEqual(navigationControllerSpy.viewControllers.first, controllerFactorySpy.stubbedController)
     }
 
     func test_whenRoutingInvokedAndRequestedToShowDetailsWithEmptyId_shouldNotNavigateToDetails() {
-        sut.routeToListScreen(in: navigationController)
+        sut.routeToListScreen(in: navigationControllerSpy)
         sut.didSelectDetail(with: "")
 
         XCTAssertEqual(detailsRouterFactorySpy.invokedMakeDetailsRouter, 0)
@@ -47,12 +47,12 @@ class ListRouterTests: XCTestCase {
     }
 
     func test_whenRoutingInvokedAndRequestedToShowDetails_shouldNavigateToDetails() {
-        sut.routeToListScreen(in: navigationController)
+        sut.routeToListScreen(in: navigationControllerSpy)
         sut.didSelectDetail(with: "<test_id>")
 
         XCTAssertEqual(detailsRouterFactorySpy.invokedMakeDetailsRouter, 1)
         XCTAssertEqual(detailsRouterFactorySpy.detailsRouterSpy.invokedNavigateToDetailsScreen.count, 1)
-        XCTAssertEqual(detailsRouterFactorySpy.detailsRouterSpy.invokedNavigateToDetailsScreen.first, navigationController)
+        XCTAssertEqual(detailsRouterFactorySpy.detailsRouterSpy.invokedNavigateToDetailsScreen.first, navigationControllerSpy)
     }
 
     func test_whenRoutingNotInvokedYet_andRequestedToShowDetails_shouldNotNavigateToDetails() {

@@ -50,7 +50,15 @@
 		3EA095AF2573CBFE00AA6AAB /* ListRouterFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */; };
 		3EB76F0A2571486400DFDD0A /* UIWindowDefaultExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */; };
 		3EB76F2C25714CD800DFDD0A /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */; };
+		3EE4942A2574D9D4005C8A05 /* ListControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE494292574D9D4005C8A05 /* ListControllerFactoryTests.swift */; };
+		3EE494382574DB56005C8A05 /* ListViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE494372574DB56005C8A05 /* ListViewControllerType.swift */; };
+		3EE494402574DC6D005C8A05 /* DetailsViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4943F2574DC6D005C8A05 /* DetailsViewControllerType.swift */; };
+		3EE494542574DD58005C8A05 /* DetailsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4944C2574DD2B005C8A05 /* DetailsRouterTests.swift */; };
+		3EE494632574DDB4005C8A05 /* DetailsControllerFactoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE494622574DDB4005C8A05 /* DetailsControllerFactoryStub.swift */; };
+		3EE494712574DFB2005C8A05 /* NavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE494702574DFB2005C8A05 /* NavigationControllerSpy.swift */; };
+		3EE494802574F36E005C8A05 /* DetailsControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE494782574F304005C8A05 /* DetailsControllerFactoryTests.swift */; };
 		3EE4948E2574F88C005C8A05 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4948D2574F88C005C8A05 /* main.swift */; };
+		3EE4949C2574FAB7005C8A05 /* DetailsRouterFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4949B2574FAB7005C8A05 /* DetailsRouterFactoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,7 +180,15 @@
 		3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterFactoryType.swift; sourceTree = "<group>"; };
 		3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowDefaultExtensionTests.swift; sourceTree = "<group>"; };
 		3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		3EE494292574D9D4005C8A05 /* ListControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListControllerFactoryTests.swift; sourceTree = "<group>"; };
+		3EE494372574DB56005C8A05 /* ListViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerType.swift; sourceTree = "<group>"; };
+		3EE4943F2574DC6D005C8A05 /* DetailsViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewControllerType.swift; sourceTree = "<group>"; };
+		3EE4944C2574DD2B005C8A05 /* DetailsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterTests.swift; sourceTree = "<group>"; };
+		3EE494622574DDB4005C8A05 /* DetailsControllerFactoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsControllerFactoryStub.swift; sourceTree = "<group>"; };
+		3EE494702574DFB2005C8A05 /* NavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerSpy.swift; sourceTree = "<group>"; };
+		3EE494782574F304005C8A05 /* DetailsControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsControllerFactoryTests.swift; sourceTree = "<group>"; };
 		3EE4948D2574F88C005C8A05 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3EE4949B2574FAB7005C8A05 /* DetailsRouterFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterFactoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +336,7 @@
 			children = (
 				3EA09574257154F700AA6AAB /* Application */,
 				3E5DEF912573DA6F003CF008 /* List */,
+				3EE494472574DCD0005C8A05 /* Details */,
 				3EA095642571502E00AA6AAB /* Doubles */,
 				3E5388C3256FCB5B00CFC66E /* Supporting Files */,
 			);
@@ -441,6 +458,7 @@
 				3E5DEF6B2573D3FA003CF008 /* View */,
 				3E5DEF522573D12B003CF008 /* Factory */,
 				3E5DEF4A2573D116003CF008 /* DetailsViewController.swift */,
+				3EE4943F2574DC6D005C8A05 /* DetailsViewControllerType.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -493,6 +511,7 @@
 		3E5DEF912573DA6F003CF008 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				3EE494272574D97B005C8A05 /* Controller */,
 				3E5DEF922573DAB9003CF008 /* Router */,
 			);
 			path = List;
@@ -562,6 +581,7 @@
 		3EA095642571502E00AA6AAB /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
+				3EE494612574DDA1005C8A05 /* Stub */,
 				3EA095652571504400AA6AAB /* Spy */,
 			);
 			path = Doubles;
@@ -576,6 +596,7 @@
 				3E5DEFA82573DC09003CF008 /* ListControllerFactorySpy.swift */,
 				3E5DEFB02573DCC9003CF008 /* DetailsRouterFactorySpy.swift */,
 				3E5DEFB82573DD78003CF008 /* DetailsRouterSpy.swift */,
+				3EE494702574DFB2005C8A05 /* NavigationControllerSpy.swift */,
 			);
 			path = Spy;
 			sourceTree = "<group>";
@@ -621,6 +642,7 @@
 			children = (
 				3E5DEF252573CEC8003CF008 /* Factory */,
 				3EA0959625715CC500AA6AAB /* ListViewController.swift */,
+				3EE494372574DB56005C8A05 /* ListViewControllerType.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -648,6 +670,72 @@
 				3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		3EE494272574D97B005C8A05 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3EE494282574D981005C8A05 /* Factory */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3EE494282574D981005C8A05 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3EE494292574D9D4005C8A05 /* ListControllerFactoryTests.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3EE494472574DCD0005C8A05 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				3EE494492574DCE8005C8A05 /* Controller */,
+				3EE494482574DCE2005C8A05 /* Router */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		3EE494482574DCE2005C8A05 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3EE4944B2574DCF9005C8A05 /* Factory */,
+				3EE4944C2574DD2B005C8A05 /* DetailsRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3EE494492574DCE8005C8A05 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3EE4944A2574DCF2005C8A05 /* Factory */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3EE4944A2574DCF2005C8A05 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3EE494782574F304005C8A05 /* DetailsControllerFactoryTests.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3EE4944B2574DCF9005C8A05 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3EE4949B2574FAB7005C8A05 /* DetailsRouterFactoryTests.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3EE494612574DDA1005C8A05 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				3EE494622574DDB4005C8A05 /* DetailsControllerFactoryStub.swift */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -921,6 +1009,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EA095AF2573CBFE00AA6AAB /* ListRouterFactoryType.swift in Sources */,
+				3EE494382574DB56005C8A05 /* ListViewControllerType.swift in Sources */,
 				3EA0959F25715D0500AA6AAB /* ListRouter.swift in Sources */,
 				3E5DEF432573D06B003CF008 /* DetailsRouterFactory.swift in Sources */,
 				3E53883A256FB40200CFC66E /* AppDelegate.swift in Sources */,
@@ -933,6 +1022,7 @@
 				3E5DEF3B2573D034003CF008 /* DetailsRouterFactoryType.swift in Sources */,
 				3EA0958825715C4E00AA6AAB /* ListRouterType.swift in Sources */,
 				3E5DEF6D2573D404003CF008 /* DetailsView.swift in Sources */,
+				3EE494402574DC6D005C8A05 /* DetailsViewControllerType.swift in Sources */,
 				3EA0959725715CC500AA6AAB /* ListViewController.swift in Sources */,
 				3E5DEF5C2573D311003CF008 /* DetailsControllerFactory.swift in Sources */,
 				3E279DD42571157000144915 /* ApplicationRouterType.swift in Sources */,
@@ -946,15 +1036,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE494542574DD58005C8A05 /* DetailsRouterTests.swift in Sources */,
+				3EE494802574F36E005C8A05 /* DetailsControllerFactoryTests.swift in Sources */,
 				3EA095672571506400AA6AAB /* ApplicationRouterSpy.swift in Sources */,
 				3E5DEFA92573DC09003CF008 /* ListControllerFactorySpy.swift in Sources */,
 				3E5DEF842573D76A003CF008 /* ListRouterSpy.swift in Sources */,
 				3E5DEFC22573E414003CF008 /* ListRouterFactoryTests.swift in Sources */,
 				3E5DEFB12573DCC9003CF008 /* DetailsRouterFactorySpy.swift in Sources */,
+				3EE494712574DFB2005C8A05 /* NavigationControllerSpy.swift in Sources */,
+				3EE4942A2574D9D4005C8A05 /* ListControllerFactoryTests.swift in Sources */,
 				3EA095782571553600AA6AAB /* ApplicationRouterTests.swift in Sources */,
 				3E5DEF752573D6AB003CF008 /* ListRouterFactorySpy.swift in Sources */,
 				3E5DEF9B2573DB08003CF008 /* ListRouterTests.swift in Sources */,
+				3EE4949C2574FAB7005C8A05 /* DetailsRouterFactoryTests.swift in Sources */,
 				3E5DEFB92573DD78003CF008 /* DetailsRouterSpy.swift in Sources */,
+				3EE494632574DDB4005C8A05 /* DetailsControllerFactoryStub.swift in Sources */,
 				3EB76F2C25714CD800DFDD0A /* AppDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

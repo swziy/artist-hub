@@ -4,7 +4,7 @@ final class DetailsControllerFactory: DetailsControllerFactoryType {
 
     // MARK: - DetailsControllerFactoryType
 
-    func makeDetailsController() -> DetailsViewController {
+    func makeDetailsController() -> DetailsViewControllerType {
         DetailsViewController()
     }
 }

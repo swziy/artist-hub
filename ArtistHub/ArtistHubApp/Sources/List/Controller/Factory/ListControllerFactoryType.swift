@@ -2,5 +2,5 @@ import UIKit
 
 protocol ListControllerFactoryType {
 
-    func makeListController() -> ListViewController
+    func makeListController() -> ListViewControllerType
 }

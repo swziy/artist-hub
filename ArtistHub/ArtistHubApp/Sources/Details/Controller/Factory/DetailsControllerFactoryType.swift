@@ -1,4 +1,4 @@
 protocol DetailsControllerFactoryType {
 
-    func makeDetailsController() -> DetailsViewController
+    func makeDetailsController() -> DetailsViewControllerType
 }

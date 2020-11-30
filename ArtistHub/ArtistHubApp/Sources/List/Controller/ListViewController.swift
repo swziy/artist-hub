@@ -5,7 +5,7 @@ protocol ListViewControllerDelegate: AnyObject {
     func didSelectDetail(with id: String)
 }
 
-final class ListViewController: UIViewController {
+final class ListViewController: UIViewController, ListViewControllerType {
 
     weak var delegate: ListViewControllerDelegate?
 

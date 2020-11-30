@@ -7,7 +7,7 @@ class ListControllerFactorySpy: ListControllerFactoryType {
 
     // MARK: - ListControllerFactoryType
 
-    func makeListController() -> ListViewController {
+    func makeListController() -> ListViewControllerType {
         invokedMakeListController += 1
         return stubbedController
     }

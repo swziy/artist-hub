@@ -1,6 +1,6 @@
 import UIKit
 
-final class DetailsViewController: UIViewController {
+final class DetailsViewController: UIViewController, DetailsViewControllerType {
 
     override func loadView() {
         view = DetailsView()

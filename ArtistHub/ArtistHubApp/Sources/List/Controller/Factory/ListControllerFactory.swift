@@ -4,7 +4,7 @@ class ListControllerFactory: ListControllerFactoryType {
 
     // MARK: - ListControllerFactoryType
 
-    func makeListController() -> ListViewController {
+    func makeListController() -> ListViewControllerType {
         ListViewController()
     }
 }

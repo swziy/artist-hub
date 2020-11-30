@@ -1,7 +1,6 @@
 import ArtistHubUserInterface
 import UIKit
 
-@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var router: ApplicationRouterType

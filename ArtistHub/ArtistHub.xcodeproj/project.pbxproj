@@ -50,6 +50,7 @@
 		3EA095AF2573CBFE00AA6AAB /* ListRouterFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */; };
 		3EB76F0A2571486400DFDD0A /* UIWindowDefaultExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */; };
 		3EB76F2C25714CD800DFDD0A /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */; };
+		3EE4948E2574F88C005C8A05 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4948D2574F88C005C8A05 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterFactoryType.swift; sourceTree = "<group>"; };
 		3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowDefaultExtensionTests.swift; sourceTree = "<group>"; };
 		3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		3EE4948D2574F88C005C8A05 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +363,7 @@
 			children = (
 				3E279DC72571150200144915 /* Router */,
 				3E279DC6257114F900144915 /* Delegate */,
+				3EE4948D2574F88C005C8A05 /* main.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -924,6 +927,7 @@
 				3E5DEF642573D368003CF008 /* ListControllerFactory.swift in Sources */,
 				3E5DEF1E2573CE01003CF008 /* DetailsRouter.swift in Sources */,
 				3E279DC92571151800144915 /* ApplicationRouter.swift in Sources */,
+				3EE4948E2574F88C005C8A05 /* main.swift in Sources */,
 				3E5DEF162573CDF6003CF008 /* DetailsRouterType.swift in Sources */,
 				3E5DEF542573D145003CF008 /* DetailsControllerFactoryType.swift in Sources */,
 				3E5DEF3B2573D034003CF008 /* DetailsRouterFactoryType.swift in Sources */,

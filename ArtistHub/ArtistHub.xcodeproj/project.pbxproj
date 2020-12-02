@@ -50,6 +50,14 @@
 		3EA095AF2573CBFE00AA6AAB /* ListRouterFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */; };
 		3EB76F0A2571486400DFDD0A /* UIWindowDefaultExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */; };
 		3EB76F2C25714CD800DFDD0A /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */; };
+		3EE153A6257654C4008AB2C2 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153A5257654C4008AB2C2 /* UIColor+Custom.swift */; };
+		3EE153F125769CDB008AB2C2 /* UIFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153F025769CDB008AB2C2 /* UIFont+Traits.swift */; };
+		3EE153FA25779984008AB2C2 /* NavigationBarAppearanceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153F925779984008AB2C2 /* NavigationBarAppearanceConfigurator.swift */; };
+		3EE1540825779D20008AB2C2 /* NavigationBarAppearanceConfiguratorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1540725779D20008AB2C2 /* NavigationBarAppearanceConfiguratorType.swift */; };
+		3EE154132577A0F5008AB2C2 /* NavigationBarAppearanceConfiguratorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE154122577A0F5008AB2C2 /* NavigationBarAppearanceConfiguratorSpy.swift */; };
+		3EE154212577A1A7008AB2C2 /* NavigationBarAppearanceConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE154202577A1A7008AB2C2 /* NavigationBarAppearanceConfiguratorTests.swift */; };
+		3EE154282577A58B008AB2C2 /* NavigationBarAppearanceConfiguratorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE154122577A0F5008AB2C2 /* NavigationBarAppearanceConfiguratorSpy.swift */; };
+		3EE154302577AF62008AB2C2 /* UIFontTraitsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1542F2577AF62008AB2C2 /* UIFontTraitsExtensionTests.swift */; };
 		3EE4942A2574D9D4005C8A05 /* ListControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE494292574D9D4005C8A05 /* ListControllerFactoryTests.swift */; };
 		3EE494382574DB56005C8A05 /* ListViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE494372574DB56005C8A05 /* ListViewControllerType.swift */; };
 		3EE494402574DC6D005C8A05 /* DetailsViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4943F2574DC6D005C8A05 /* DetailsViewControllerType.swift */; };
@@ -180,6 +188,13 @@
 		3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterFactoryType.swift; sourceTree = "<group>"; };
 		3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowDefaultExtensionTests.swift; sourceTree = "<group>"; };
 		3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		3EE153A5257654C4008AB2C2 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		3EE153F025769CDB008AB2C2 /* UIFont+Traits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Traits.swift"; sourceTree = "<group>"; };
+		3EE153F925779984008AB2C2 /* NavigationBarAppearanceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarAppearanceConfigurator.swift; sourceTree = "<group>"; };
+		3EE1540725779D20008AB2C2 /* NavigationBarAppearanceConfiguratorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarAppearanceConfiguratorType.swift; sourceTree = "<group>"; };
+		3EE154122577A0F5008AB2C2 /* NavigationBarAppearanceConfiguratorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarAppearanceConfiguratorSpy.swift; sourceTree = "<group>"; };
+		3EE154202577A1A7008AB2C2 /* NavigationBarAppearanceConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarAppearanceConfiguratorTests.swift; sourceTree = "<group>"; };
+		3EE1542F2577AF62008AB2C2 /* UIFontTraitsExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontTraitsExtensionTests.swift; sourceTree = "<group>"; };
 		3EE494292574D9D4005C8A05 /* ListControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListControllerFactoryTests.swift; sourceTree = "<group>"; };
 		3EE494372574DB56005C8A05 /* ListViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerType.swift; sourceTree = "<group>"; };
 		3EE4943F2574DC6D005C8A05 /* DetailsViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewControllerType.swift; sourceTree = "<group>"; };
@@ -270,6 +285,8 @@
 			children = (
 				3E4A805E257145FD0021312B /* UIWindow+Default.swift */,
 				3EA095A625715F0E00AA6AAB /* UINavigationController+Default.swift */,
+				3EE153A5257654C4008AB2C2 /* UIColor+Custom.swift */,
+				3EE153F025769CDB008AB2C2 /* UIFont+Traits.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -546,6 +563,7 @@
 		3E5DF9CF257127B200C0F6FA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3EE153F825779960008AB2C2 /* Appearance */,
 				3E4A806C257146300021312B /* Extension */,
 				3E5DF9D1257127DC00C0F6FA /* Supporting Files */,
 			);
@@ -555,7 +573,9 @@
 		3E5DF9D0257127B900C0F6FA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3EE1540F2577A0BC008AB2C2 /* Appearance */,
 				3EB76F11257148B300DFDD0A /* Extension */,
+				3EE154102577A0D9008AB2C2 /* Doubles */,
 				3E5DF9D22571280400C0F6FA /* Supporting Files */,
 			);
 			path = Tests;
@@ -660,6 +680,7 @@
 			isa = PBXGroup;
 			children = (
 				3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */,
+				3EE1542F2577AF62008AB2C2 /* UIFontTraitsExtensionTests.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -670,6 +691,39 @@
 				3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		3EE153F825779960008AB2C2 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				3EE153F925779984008AB2C2 /* NavigationBarAppearanceConfigurator.swift */,
+				3EE1540725779D20008AB2C2 /* NavigationBarAppearanceConfiguratorType.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		3EE1540F2577A0BC008AB2C2 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				3EE154202577A1A7008AB2C2 /* NavigationBarAppearanceConfiguratorTests.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		3EE154102577A0D9008AB2C2 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				3EE154112577A0E4008AB2C2 /* Spy */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		3EE154112577A0E4008AB2C2 /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				3EE154122577A0F5008AB2C2 /* NavigationBarAppearanceConfiguratorSpy.swift */,
+			);
+			path = Spy;
 			sourceTree = "<group>";
 		};
 		3EE494272574D97B005C8A05 /* Controller */ = {
@@ -1047,6 +1101,7 @@
 				3EE4942A2574D9D4005C8A05 /* ListControllerFactoryTests.swift in Sources */,
 				3EA095782571553600AA6AAB /* ApplicationRouterTests.swift in Sources */,
 				3E5DEF752573D6AB003CF008 /* ListRouterFactorySpy.swift in Sources */,
+				3EE154282577A58B008AB2C2 /* NavigationBarAppearanceConfiguratorSpy.swift in Sources */,
 				3E5DEF9B2573DB08003CF008 /* ListRouterTests.swift in Sources */,
 				3EE4949C2574FAB7005C8A05 /* DetailsRouterFactoryTests.swift in Sources */,
 				3E5DEFB92573DD78003CF008 /* DetailsRouterSpy.swift in Sources */,
@@ -1084,6 +1139,10 @@
 			files = (
 				3E4A805F257145FD0021312B /* UIWindow+Default.swift in Sources */,
 				3EA095A725715F0E00AA6AAB /* UINavigationController+Default.swift in Sources */,
+				3EE153FA25779984008AB2C2 /* NavigationBarAppearanceConfigurator.swift in Sources */,
+				3EE153A6257654C4008AB2C2 /* UIColor+Custom.swift in Sources */,
+				3EE1540825779D20008AB2C2 /* NavigationBarAppearanceConfiguratorType.swift in Sources */,
+				3EE153F125769CDB008AB2C2 /* UIFont+Traits.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1091,7 +1150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE154212577A1A7008AB2C2 /* NavigationBarAppearanceConfiguratorTests.swift in Sources */,
 				3EB76F0A2571486400DFDD0A /* UIWindowDefaultExtensionTests.swift in Sources */,
+				3EE154302577AF62008AB2C2 /* UIFontTraitsExtensionTests.swift in Sources */,
+				3EE154132577A0F5008AB2C2 /* NavigationBarAppearanceConfiguratorSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var router: ApplicationRouterType
     var window: UIWindow?
+    var navigationBarAppearanceConfigurator: NavigationBarAppearanceConfiguratorType
 
     // MARK: - Initialization
 
@@ -13,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navigationController: UINavigationController.default,
             listRouterFactory: ListRouterFactory()
         )
+        navigationBarAppearanceConfigurator = NavigationBarAppearanceConfigurator()
     }
 
     // MARK: - UIApplicationDelegate
@@ -21,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        navigationBarAppearanceConfigurator.configure()
+
         window = UIWindow.default
 
         if let window = window {

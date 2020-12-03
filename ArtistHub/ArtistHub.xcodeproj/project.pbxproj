@@ -10,6 +10,9 @@
 		3E279DC92571151800144915 /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E279DC82571151800144915 /* ApplicationRouter.swift */; };
 		3E279DD42571157000144915 /* ApplicationRouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E279DD32571157000144915 /* ApplicationRouterType.swift */; };
 		3E30F8472578EE3800CB7A0A /* StylableExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E30F8462578EE3800CB7A0A /* StylableExtensionTests.swift */; };
+		3E30F8562579013100CB7A0A /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E30F8552579013100CB7A0A /* Artist.swift */; };
+		3E30F89325790F8F00CB7A0A /* ListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E30F89225790F8F00CB7A0A /* ListViewControllerTests.swift */; };
+		3E30F89C25790FE800CB7A0A /* ListViewLayoutConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E30F89B25790FE800CB7A0A /* ListViewLayoutConfigurationTests.swift */; };
 		3E4A805F257145FD0021312B /* UIWindow+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A805E257145FD0021312B /* UIWindow+Default.swift */; };
 		3E53883A256FB40200CFC66E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E538839256FB40200CFC66E /* AppDelegate.swift */; };
 		3E538843256FB40300CFC66E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E538842256FB40300CFC66E /* Assets.xcassets */; };
@@ -51,11 +54,14 @@
 		3EA095AF2573CBFE00AA6AAB /* ListRouterFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */; };
 		3EB76F0A2571486400DFDD0A /* UIWindowDefaultExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */; };
 		3EB76F2C25714CD800DFDD0A /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */; };
+		3EE1538025764A2A008AB2C2 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1537F25764A2A008AB2C2 /* ListView.swift */; };
 		3EE153A6257654C4008AB2C2 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153A5257654C4008AB2C2 /* UIColor+Custom.swift */; };
 		3EE153AF25766449008AB2C2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153AE25766449008AB2C2 /* Style.swift */; };
 		3EE153BD2576660C008AB2C2 /* Stylable+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153BC2576660C008AB2C2 /* Stylable+UIView.swift */; };
 		3EE153C5257669E7008AB2C2 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153C4257669E7008AB2C2 /* Stylable.swift */; };
 		3EE153CD25766BF0008AB2C2 /* Stylable+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153CC25766BF0008AB2C2 /* Stylable+UICollectionView.swift */; };
+		3EE153DB25766E75008AB2C2 /* ListViewLayoutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153DA25766E75008AB2C2 /* ListViewLayoutConfigurator.swift */; };
+		3EE153E325767613008AB2C2 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153E225767613008AB2C2 /* ListViewCell.swift */; };
 		3EE153F125769CDB008AB2C2 /* UIFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153F025769CDB008AB2C2 /* UIFont+Traits.swift */; };
 		3EE153FA25779984008AB2C2 /* NavigationBarAppearanceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE153F925779984008AB2C2 /* NavigationBarAppearanceConfigurator.swift */; };
 		3EE1540825779D20008AB2C2 /* NavigationBarAppearanceConfiguratorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1540725779D20008AB2C2 /* NavigationBarAppearanceConfiguratorType.swift */; };
@@ -72,6 +78,7 @@
 		3EE494802574F36E005C8A05 /* DetailsControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE494782574F304005C8A05 /* DetailsControllerFactoryTests.swift */; };
 		3EE4948E2574F88C005C8A05 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4948D2574F88C005C8A05 /* main.swift */; };
 		3EE4949C2574FAB7005C8A05 /* DetailsRouterFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4949B2574FAB7005C8A05 /* DetailsRouterFactoryTests.swift */; };
+		C6F4DBD98A367A7E87AA8FD1 /* Artist+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D3054DC6988D8B9DDC3B /* Artist+Sample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +152,9 @@
 		3E279DC82571151800144915 /* ApplicationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
 		3E279DD32571157000144915 /* ApplicationRouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouterType.swift; sourceTree = "<group>"; };
 		3E30F8462578EE3800CB7A0A /* StylableExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylableExtensionTests.swift; sourceTree = "<group>"; };
+		3E30F8552579013100CB7A0A /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		3E30F89225790F8F00CB7A0A /* ListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTests.swift; sourceTree = "<group>"; };
+		3E30F89B25790FE800CB7A0A /* ListViewLayoutConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewLayoutConfigurationTests.swift; sourceTree = "<group>"; };
 		3E4A805E257145FD0021312B /* UIWindow+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Default.swift"; sourceTree = "<group>"; };
 		3E538836256FB40200CFC66E /* ArtistHubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtistHubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E538839256FB40200CFC66E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -194,11 +204,14 @@
 		3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterFactoryType.swift; sourceTree = "<group>"; };
 		3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowDefaultExtensionTests.swift; sourceTree = "<group>"; };
 		3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		3EE1537F25764A2A008AB2C2 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		3EE153A5257654C4008AB2C2 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		3EE153AE25766449008AB2C2 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		3EE153BC2576660C008AB2C2 /* Stylable+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIView.swift"; sourceTree = "<group>"; };
 		3EE153C4257669E7008AB2C2 /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
 		3EE153CC25766BF0008AB2C2 /* Stylable+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UICollectionView.swift"; sourceTree = "<group>"; };
+		3EE153DA25766E75008AB2C2 /* ListViewLayoutConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewLayoutConfigurator.swift; sourceTree = "<group>"; };
+		3EE153E225767613008AB2C2 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		3EE153F025769CDB008AB2C2 /* UIFont+Traits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Traits.swift"; sourceTree = "<group>"; };
 		3EE153F925779984008AB2C2 /* NavigationBarAppearanceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarAppearanceConfigurator.swift; sourceTree = "<group>"; };
 		3EE1540725779D20008AB2C2 /* NavigationBarAppearanceConfiguratorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarAppearanceConfiguratorType.swift; sourceTree = "<group>"; };
@@ -214,6 +227,7 @@
 		3EE494782574F304005C8A05 /* DetailsControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsControllerFactoryTests.swift; sourceTree = "<group>"; };
 		3EE4948D2574F88C005C8A05 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3EE4949B2574FAB7005C8A05 /* DetailsRouterFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterFactoryTests.swift; sourceTree = "<group>"; };
+		C6F4D3054DC6988D8B9DDC3B /* Artist+Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Artist+Sample.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +310,23 @@
 				3E30F8462578EE3800CB7A0A /* StylableExtensionTests.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		3E30F8542579012100CB7A0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E30F8552579013100CB7A0A /* Artist.swift */,
+				C6F4D3054DC6988D8B9DDC3B /* Artist+Sample.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E30F89A25790FD400CB7A0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E30F89B25790FE800CB7A0A /* ListViewLayoutConfigurationTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3E4A806C257146300021312B /* Extension */ = {
@@ -432,6 +463,7 @@
 		3E5388BF256FCAFD00CFC66E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3E30F8542579012100CB7A0A /* Model */,
 				3E5388C1256FCB1900CFC66E /* Supporting Files */,
 			);
 			path = Sources;
@@ -680,6 +712,7 @@
 		3EA0959525715C9C00AA6AAB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3EE1537E25764A1D008AB2C2 /* View */,
 				3E5DEF252573CEC8003CF008 /* Factory */,
 				3EA0959625715CC500AA6AAB /* ListViewController.swift */,
 				3EE494372574DB56005C8A05 /* ListViewControllerType.swift */,
@@ -711,6 +744,16 @@
 				3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		3EE1537E25764A1D008AB2C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3EE1537F25764A2A008AB2C2 /* ListView.swift */,
+				3EE153E225767613008AB2C2 /* ListViewCell.swift */,
+				3EE153DA25766E75008AB2C2 /* ListViewLayoutConfigurator.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3EE153AD257663B5008AB2C2 /* Style */ = {
@@ -760,7 +803,9 @@
 		3EE494272574D97B005C8A05 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3E30F89A25790FD400CB7A0A /* View */,
 				3EE494282574D981005C8A05 /* Factory */,
+				3E30F89225790F8F00CB7A0A /* ListViewControllerTests.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -996,6 +1041,7 @@
 					};
 					3E538898256FCABD00CFC66E = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					3E5388A0256FCABD00CFC66E = {
 						CreatedOnToolsVersion = 12.2;
@@ -1097,10 +1143,13 @@
 				3EE494382574DB56005C8A05 /* ListViewControllerType.swift in Sources */,
 				3EA0959F25715D0500AA6AAB /* ListRouter.swift in Sources */,
 				3E5DEF432573D06B003CF008 /* DetailsRouterFactory.swift in Sources */,
+				3EE153E325767613008AB2C2 /* ListViewCell.swift in Sources */,
 				3E53883A256FB40200CFC66E /* AppDelegate.swift in Sources */,
 				3E5DEF642573D368003CF008 /* ListControllerFactory.swift in Sources */,
 				3E5DEF1E2573CE01003CF008 /* DetailsRouter.swift in Sources */,
 				3E279DC92571151800144915 /* ApplicationRouter.swift in Sources */,
+				3EE153DB25766E75008AB2C2 /* ListViewLayoutConfigurator.swift in Sources */,
+				3EE1538025764A2A008AB2C2 /* ListView.swift in Sources */,
 				3EE4948E2574F88C005C8A05 /* main.swift in Sources */,
 				3E5DEF162573CDF6003CF008 /* DetailsRouterType.swift in Sources */,
 				3E5DEF542573D145003CF008 /* DetailsControllerFactoryType.swift in Sources */,
@@ -1133,6 +1182,8 @@
 				3EA095782571553600AA6AAB /* ApplicationRouterTests.swift in Sources */,
 				3E5DEF752573D6AB003CF008 /* ListRouterFactorySpy.swift in Sources */,
 				3EE154282577A58B008AB2C2 /* NavigationBarAppearanceConfiguratorSpy.swift in Sources */,
+				3E30F89325790F8F00CB7A0A /* ListViewControllerTests.swift in Sources */,
+				3E30F89C25790FE800CB7A0A /* ListViewLayoutConfigurationTests.swift in Sources */,
 				3E5DEF9B2573DB08003CF008 /* ListRouterTests.swift in Sources */,
 				3EE4949C2574FAB7005C8A05 /* DetailsRouterFactoryTests.swift in Sources */,
 				3E5DEFB92573DD78003CF008 /* DetailsRouterSpy.swift in Sources */,
@@ -1153,6 +1204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E30F8562579013100CB7A0A /* Artist.swift in Sources */,
+				C6F4DBD98A367A7E87AA8FD1 /* Artist+Sample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1488,6 +1541,7 @@
 		3E5388AB256FCABD00CFC66E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1506,6 +1560,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1516,6 +1571,7 @@
 		3E5388AC256FCABD00CFC66E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1544,6 +1600,7 @@
 		3E5388AE256FCABD00CFC66E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CPFPRP3P33;
 				INFOPLIST_FILE = "ArtistHubCore/Tests/Supporting Files/Info.plist";
@@ -1562,6 +1619,7 @@
 		3E5388AF256FCABD00CFC66E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CPFPRP3P33;
 				INFOPLIST_FILE = "ArtistHubCore/Tests/Supporting Files/Info.plist";

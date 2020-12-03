@@ -2,9 +2,9 @@ import UIKit
 
 final class DetailsView: UIView {
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = UIColor.white
+    init() {
+        super.init(frame: .zero)
+        backgroundColor = UIColor.Fill.lightGray
     }
 
     // MARK: - Required init

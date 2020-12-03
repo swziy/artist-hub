@@ -1,12 +1,12 @@
 import UIKit
 
-extension UIFont {
+public extension UIFont {
 
-    public var bold: UIFont {
+    var bold: UIFont {
         withTraits(traits: .traitBold)
     }
 
-    public var italic: UIFont {
+    var italic: UIFont {
         withTraits(traits: .traitItalic)
     }
 

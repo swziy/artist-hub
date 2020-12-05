@@ -37,7 +37,7 @@ class TaskSchedulerTests: XCTestCase {
         XCTAssertEqual(executed, ["2", "1"])
     }
 
-    func test_whenMultipeTaskAreScheduled_shouldRunAllTasks() {
+    func test_whenMultipleTaskAreScheduled_shouldRunAllTasks() {
         for id in 1...4 {
             let task = createTask(id: "\(id)")
             sut.schedule(task: task)
@@ -53,13 +53,13 @@ class TaskSchedulerTests: XCTestCase {
 
     func test_whenGroupIsScheduled_shouldCompleteAfterAllTasksFinish() {
         let firstGroupTask = createTask(id: "1")
-        let scondGroupTask = createTask(id: "2")
+        let secondGroupTask = createTask(id: "2")
 
         let lastCompletionExpectation = expectation(description: "should run execution closure")
 
         let queue = DispatchQueue(label: "notify.serial.queue")
 
-        sut.schedule(list: scondGroupTask, firstGroupTask, notifyQuque: queue) {
+        sut.schedule(list: secondGroupTask, firstGroupTask, notifyQueue: queue) {
             lastCompletionExpectation.fulfill()
         }
 
@@ -84,7 +84,7 @@ class TaskSchedulerTests: XCTestCase {
 
         let queue = DispatchQueue(label: "notify.serial.queue")
 
-        sut.schedule(group: [firstGroupTask, scondGroupTask], notifyQuque: queue) {
+        sut.schedule(group: [firstGroupTask, scondGroupTask], notifyQueue: queue) {
             lastCompletionExpectation.fulfill()
         }
 
@@ -127,7 +127,7 @@ private struct RecordedTaskEvent: Equatable {
 private extension TaskSchedulerTests {
 
     func createTask(id: String) -> Task {
-        return .init {
+        .init {
             self.recordOutput.append(.init(id: id, eventType: .execution))
         } completion: {
             self.recordOutput.append(.init(id: id, eventType: .completion))

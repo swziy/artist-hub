@@ -1,5 +1,3 @@
 import UIKit
 
-protocol DetailsViewControllerType: UIViewController {
-    
-}
+protocol DetailsViewControllerType: UIViewController {}

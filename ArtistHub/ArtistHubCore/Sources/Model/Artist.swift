@@ -8,6 +8,8 @@ public struct Artist: Equatable, Hashable {
     public let description: String
     public let followers: String
 
+    // MARK: - Initialization
+
     public init(id: Int, avatar: String, name: String,
                 username: String, date: String, description: String,
                 followers: String) {

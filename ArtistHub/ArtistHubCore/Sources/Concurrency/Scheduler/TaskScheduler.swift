@@ -24,12 +24,12 @@ public final class TaskScheduler: TaskSchedulerType {
     }
 
     public func schedule(group: [Task],
-                         notifyQuque: DispatchQueue = .main,
+                         notifyQueue: DispatchQueue = .main,
                          completion: @escaping () -> Void) {
         let dispatchGroup = DispatchGroup()
         group.forEach { _ in dispatchGroup.enter() }
 
-        dispatchGroup.notify(queue: notifyQuque, execute: completion)
+        dispatchGroup.notify(queue: notifyQueue, execute: completion)
 
         let wrappedGroup = group.map { orginalTask in
             Task(id: orginalTask.id, execution: orginalTask.execution) {
@@ -42,9 +42,9 @@ public final class TaskScheduler: TaskSchedulerType {
     }
 
     public func schedule(list: Task...,
-                         notifyQuque: DispatchQueue = .main,
+                         notifyQueue: DispatchQueue = .main,
                          completion: @escaping () -> Void) {
-        schedule(group: list, notifyQuque: notifyQuque, completion: completion)
+        schedule(group: list, notifyQueue: notifyQueue, completion: completion)
     }
 
     // MARK: - Private
@@ -58,11 +58,11 @@ public final class TaskScheduler: TaskSchedulerType {
             return
         }
 
-        let task = dequeuePandingTask()
+        let task = dequeuePendingTask()
 
         workDispatcher.dispatch {
             task.execute()
-            
+
             self.syncQueue.async {
                 self.removeActiveTask(with: task.id)
                 self.schedulePendingTasks()
@@ -70,7 +70,7 @@ public final class TaskScheduler: TaskSchedulerType {
         }
     }
 
-    private func dequeuePandingTask() -> Task {
+    private func dequeuePendingTask() -> Task {
         let pendingTask = pendingTasks[0]
         pendingTasks.removeFirst()
         activeTasks.append(pendingTask)

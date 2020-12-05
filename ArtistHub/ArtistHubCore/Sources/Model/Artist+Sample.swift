@@ -12,7 +12,7 @@ extension Artist {
         )
     }
 
-    // MARK: - Pirvate
+    // MARK: - Private
 
     static func description(for id: Int) -> String {
         let defaultDescription = "Dutch post-impressionist painter who is among the most famous and influential figures in the history"

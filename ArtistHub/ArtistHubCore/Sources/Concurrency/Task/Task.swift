@@ -1,19 +1,19 @@
-public class Task {
+public class Task<T> {
 
     let id: UUID
-    let execution: () -> Void
-    let completion: () -> Void
+    let execution: () -> T
+    let completion: (T) -> Void
 
     // MARK: - Initialization
 
-    public init(id: UUID = UUID(), execution: @escaping () -> Void, completion: @escaping () -> Void) {
+    public init(id: UUID = UUID(), execution: @escaping () -> T, completion: @escaping (T) -> Void) {
         self.id = id
         self.execution = execution
         self.completion = completion
     }
 
     func execute() {
-        execution()
-        completion()
+        let result = execution()
+        completion(result)
     }
 }

@@ -1,7 +1,9 @@
-public final class TaskScheduler: TaskSchedulerType {
+public final class TaskScheduler<T>: TaskSchedulerType {
 
-    private var activeTasks: [Task] = []
-    private var pendingTasks: [Task] = []
+    public typealias TaskResult = T
+
+    private var activeTasks: [Task<TaskResult>] = []
+    private var pendingTasks: [Task<TaskResult>] = []
     private let maxConcurrentTasks: Int
     private let workDispatcher: DispatcherType
     private let syncQueue = DispatchQueue(label: "task.scheduler.sync.queue")
@@ -16,14 +18,14 @@ public final class TaskScheduler: TaskSchedulerType {
 
     // MARK: - TaskSchedulerType
 
-    public func schedule(task: Task) {
+    public func schedule(task: Task<TaskResult>) {
         syncQueue.sync {
             self.pendingTasks.append(task)
             self.schedulePendingTasks()
         }
     }
 
-    public func schedule(group: [Task],
+    public func schedule(group: [Task<TaskResult>],
                          notifyQueue: DispatchQueue = .main,
                          completion: @escaping () -> Void) {
         let dispatchGroup = DispatchGroup()
@@ -31,20 +33,14 @@ public final class TaskScheduler: TaskSchedulerType {
 
         dispatchGroup.notify(queue: notifyQueue, execute: completion)
 
-        let wrappedGroup = group.map { orginalTask in
-            Task(id: orginalTask.id, execution: orginalTask.execution) {
-                orginalTask.completion()
+        let wrappedGroup = group.map { originalTask in
+            Task(id: originalTask.id, execution: originalTask.execution) { result in
+                originalTask.completion(result)
                 dispatchGroup.leave()
             }
         }
 
         wrappedGroup.forEach(schedule)
-    }
-
-    public func schedule(list: Task...,
-                         notifyQueue: DispatchQueue = .main,
-                         completion: @escaping () -> Void) {
-        schedule(group: list, notifyQueue: notifyQueue, completion: completion)
     }
 
     // MARK: - Private
@@ -70,7 +66,7 @@ public final class TaskScheduler: TaskSchedulerType {
         }
     }
 
-    private func dequeuePendingTask() -> Task {
+    private func dequeuePendingTask() -> Task<TaskResult> {
         let pendingTask = pendingTasks[0]
         pendingTasks.removeFirst()
         activeTasks.append(pendingTask)

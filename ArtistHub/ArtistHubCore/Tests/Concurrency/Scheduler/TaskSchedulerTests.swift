@@ -6,7 +6,7 @@ class TaskSchedulerTests: XCTestCase {
 
     fileprivate var recordOutput: [RecordedTaskEvent]!
     var dispatcherStub: DispatcherStub!
-    var sut: TaskScheduler!
+    var sut: TaskScheduler<String>!
 
     override func setUp() {
         super.setUp()
@@ -26,9 +26,10 @@ class TaskSchedulerTests: XCTestCase {
     func test_whenTaskIsScheduled_shouldExecuteGivenTask() {
         var executed: [String] = []
 
-        let task = Task {
+        let task = Task<String> {
             executed.append("2")
-        } completion: {
+            return "1"
+        } completion: { _ in
             executed.append("1")
         }
 
@@ -59,7 +60,7 @@ class TaskSchedulerTests: XCTestCase {
 
         let queue = DispatchQueue(label: "notify.serial.queue")
 
-        sut.schedule(list: secondGroupTask, firstGroupTask, notifyQueue: queue) {
+        sut.schedule(group: [secondGroupTask, firstGroupTask], notifyQueue: queue) {
             lastCompletionExpectation.fulfill()
         }
 
@@ -126,11 +127,12 @@ private struct RecordedTaskEvent: Equatable {
 
 private extension TaskSchedulerTests {
 
-    func createTask(id: String) -> Task {
+    func createTask(id: String) -> Task<String> {
         .init {
             self.recordOutput.append(.init(id: id, eventType: .execution))
-        } completion: {
-            self.recordOutput.append(.init(id: id, eventType: .completion))
+            return id
+        } completion: { result in
+            self.recordOutput.append(.init(id: "\(result)", eventType: .completion))
         }
     }
 }

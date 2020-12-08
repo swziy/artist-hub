@@ -46,6 +46,6 @@ class ArtistListServiceTests: XCTestCase {
     func test_whenInvoked_shouldUseProperUrl() {
         sut.getArtistList { _ in }
 
-        XCTAssertEqual(networkClientSpy.capturedUrl, ["https://gist.githubusercontent.com/swziy/fdb13610fc7bd5b33556c0996a20af1f/raw/e31f537dc4a57368b9433e4e8966b87117fc22c3/artist-hub-list.json"])
+        XCTAssertEqual(networkClientSpy.capturedUrl, ["https://gist.githubusercontent.com/swziy/fdb13610fc7bd5b33556c0996a20af1f/raw/c9a537f8ec230bb9959143b59330fc369a9fcd56/artist-hub-list.json"])
     }
 }

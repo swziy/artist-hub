@@ -33,7 +33,7 @@ class ArtistListServiceTests: XCTestCase {
     }
 
     func test_whenErrorOccurs_shouldPassError() {
-        networkClientSpy.stubbedResult = .failure(.invalidParams)
+        networkClientSpy.stubbedDataTaskResult = .failure(.invalidParams)
 
         var capturedResult: Result<[Artist], ApiError>!
         sut.getArtistList { (result) in

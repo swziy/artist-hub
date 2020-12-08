@@ -15,8 +15,18 @@ final class NetworkClient: NetworkClientType {
     func request<R: Decodable>(
         url: String,
         completion: @escaping (Result<R, ApiError>) -> Void
-    ) -> URLSessionDataTask? {
+    ) -> NetworkTaskType? {
         let task = try? dataTask(url: url, completion: completion)
+        task?.resume()
+        return task
+    }
+
+    @discardableResult
+    func download(
+        url: String,
+        completion: @escaping (Result<Data, ApiError>) -> Void
+    ) -> NetworkTaskType? {
+        let task = try? downloadTask(url: url, completion: completion)
         task?.resume()
         return task
     }
@@ -26,14 +36,13 @@ final class NetworkClient: NetworkClientType {
     private func dataTask<R: Decodable>(
         url: String,
         completion: @escaping (Result<R, ApiError>) -> Void
-    ) throws -> URLSessionDataTask {
+    ) throws -> NetworkTaskType {
         guard let url = URL(string: url) else {
             completion(.failure(.invalidParams))
             throw ApiError.invalidParams
         }
 
-        let request = URLRequest(url: url)
-        let dataTask = networkSession.dataTask(with: request) { [errorHandler] (data, response, error) in
+        let dataTask = networkSession.makeDataTask(with: URLRequest(url: url)) { [errorHandler] (data, response, error) in
             if let error = errorHandler.handle(error: error, response: response, data: data) {
                 completion(.failure(error))
                 return
@@ -48,5 +57,36 @@ final class NetworkClient: NetworkClientType {
         }
 
         return dataTask
+    }
+
+    private func downloadTask(
+        url: String,
+        completion: @escaping (Result<Data, ApiError>) -> Void
+    ) throws -> NetworkTaskType? {
+        guard let url = URL(string: url) else {
+            completion(.failure(.invalidParams))
+            throw ApiError.invalidParams
+        }
+
+        let downloadTask = networkSession.makeDownloadTask(with: URLRequest(url: url)) { [errorHandler] location, response, error in
+            guard let location = location else {
+                completion(.failure(.generalError))
+                return
+            }
+
+            guard let data = try? Data(contentsOf: location) else {
+                completion(.failure(.generalError))
+                return
+            }
+
+            if let error = errorHandler.handle(error: error, response: response, data: data) {
+                completion(.failure(error))
+                return
+            }
+
+            completion(.success(data))
+        }
+
+        return downloadTask
     }
 }

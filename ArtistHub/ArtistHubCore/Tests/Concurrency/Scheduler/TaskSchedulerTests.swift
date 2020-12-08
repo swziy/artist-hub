@@ -6,14 +6,14 @@ class TaskSchedulerTests: XCTestCase {
 
     fileprivate var recordOutput: [RecordedTaskEvent]!
     var dispatcherStub: DispatcherStub!
-    var sut: TaskScheduler<String>!
+    var sut: AnyTaskScheduler<String>!
 
     override func setUp() {
         super.setUp()
         recordOutput = []
         dispatcherStub = DispatcherStub()
-        sut = TaskScheduler(maxConcurrentTasks: 5,
-                            workDispatcher: dispatcherStub)
+        sut = AnyTaskScheduler(TaskScheduler(maxConcurrentTasks: 5,
+                                             workDispatcher: dispatcherStub))
     }
 
     override func tearDown() {

@@ -13,8 +13,17 @@ final class ListViewController: UIViewController, ListViewControllerType {
     }
 
     weak var delegate: ListViewControllerDelegate?
+
     private lazy var listView = ListView()
     private lazy var dataSource = makeDataSource()
+    private let artistListService: ArtistListServiceType
+
+    // MARK: - Initialization
+
+    init(artistListService: ArtistListServiceType) {
+        self.artistListService = artistListService
+        super.init(nibName: nil, bundle: nil)
+    }
 
     // MARK: - Lifecycle
 
@@ -25,20 +34,7 @@ final class ListViewController: UIViewController, ListViewControllerType {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Artist Hub"
-
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ListViewController.userDidTap))
-        view.addGestureRecognizer(tapGesture)
-
-        setUpData()
-    }
-
-    // MARK: - Actions
-
-    @objc private func userDidTap() {
-        var snapshot = dataSource.snapshot()
-        let newIdentifier = snapshot.itemIdentifiers.first!.id == 0 ? Section.main.rawValue : snapshot.itemIdentifiers.first!.id + 1
-        snapshot.insertItems([Artist.sample(id: newIdentifier)], beforeItem: snapshot.itemIdentifiers.first!)
-        dataSource.apply(snapshot, animatingDifferences: true)
+        loadData()
     }
 
     // MARK: - Private
@@ -59,10 +55,27 @@ final class ListViewController: UIViewController, ListViewControllerType {
         }
     }
 
-    private func setUpData() {
+    private func loadData() {
+        artistListService.getArtistList { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                self?.display(list: data)
+            case .failure(let error):
+                // TODO: Handle error!
+                print("// TODO: handle error \(error)")
+            }
+        }
+    }
+
+    private func display(list: [Artist]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Artist>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(Array(0..<Section.main.rawValue).map { Artist.sample(id: $0) })
-        dataSource.apply(snapshot, animatingDifferences: false)
+        snapshot.appendItems(list)
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
+
+    // MARK: - Required initializer
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) { nil }
 }

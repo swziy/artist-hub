@@ -3,18 +3,21 @@ import XCTest
 
 class ListViewControllerTests: XCTestCase {
 
+    var artistListServiceStub: ArtistListServiceStub!
     var sut: ListViewController!
     var view: ListView!
 
     override func setUp() {
         super.setUp()
-        sut = ListViewController()
+        artistListServiceStub = ArtistListServiceStub()
+        sut = ListViewController(artistListService: artistListServiceStub)
         view = sut.view as? ListView
     }
 
     override func tearDown() {
         super.tearDown()
         sut = nil
+        view = nil
     }
 
     func test_whenViewIsLoaded_shouldSetProperTitle() {
@@ -28,6 +31,6 @@ class ListViewControllerTests: XCTestCase {
 
     func test_whenViewIsLoaded_shouldPopulateSampleData() {
         XCTAssertEqual(view.collectionView.numberOfSections, 1)
-        XCTAssertEqual(view.collectionView.numberOfItems(inSection: 0), 40)
+        XCTAssertEqual(view.collectionView.numberOfItems(inSection: 0), 5)
     }
 }

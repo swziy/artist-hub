@@ -1,4 +1,4 @@
-public struct Artist: Equatable, Hashable {
+public struct Artist: Equatable, Hashable, Decodable {
 
     public let id: Int
     public let avatar: String

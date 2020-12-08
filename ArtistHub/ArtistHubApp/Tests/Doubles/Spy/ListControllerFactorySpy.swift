@@ -2,7 +2,7 @@
 
 class ListControllerFactorySpy: ListControllerFactoryType {
 
-    var stubbedController = ListViewController()
+    var stubbedController = ListViewController(artistListService: ArtistListServiceStub())
     private(set) var invokedMakeListController: Int = 0
 
     // MARK: - ListControllerFactoryType

@@ -1,6 +1,8 @@
+import ArtistHubCore
+
 extension Artist {
 
-    public static func sample(id: Int) -> Self {
+    static func testData(with id: Int) -> Artist {
         .init(
             id: id,
             avatar: "vincent",
@@ -14,12 +16,25 @@ extension Artist {
 
     // MARK: - Private
 
-    static func description(for id: Int) -> String {
+    private static func description(for id: Int) -> String {
         let defaultDescription = "Dutch post-impressionist painter who is among the most famous and influential figures in the history"
         if id % 2 == 0 {
             return "\(defaultDescription). \(defaultDescription)"
         }
 
         return defaultDescription
+    }
+}
+
+extension Array: TestDataAccessible where Element == Artist {
+
+    static var testData: [Artist] {
+        [
+            .testData(with: 1),
+            .testData(with: 2),
+            .testData(with: 3),
+            .testData(with: 4),
+            .testData(with: 5),
+        ]
     }
 }

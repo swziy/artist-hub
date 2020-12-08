@@ -12,6 +12,7 @@ final class ListViewCell: UICollectionViewCell {
     let nameLabel = UILabel(style: .init {
         $0.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         $0.textColor = UIColor.black
+        $0.adjustsFontSizeToFitWidth = true
     })
 
     let usernameLabel = UILabel(style: .init {

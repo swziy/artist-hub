@@ -7,7 +7,8 @@ class ListControllerFactory: ListControllerFactoryType {
 
     func makeListController() -> ListViewControllerType {
         let artistListService = ArtistListServiceFactory().makeArtistListService()
+        let imageManager = ImageManagerFactory().makeImageManager()
 
-        return ListViewController(artistListService: artistListService)
+        return ListViewController(artistListService: artistListService, imageManager: imageManager)
     }
 }

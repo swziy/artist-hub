@@ -22,6 +22,8 @@ class ArtistListServiceTests: XCTestCase {
     }
 
     func test_whenDataIsReceived_shouldReturnSuccess() {
+        networkClientSpy.stubbedDataTaskResult = .success(.testData)
+        
         var capturedResult: Result<[Artist], ApiError>!
         sut.getArtistList { (result) in
             capturedResult = result

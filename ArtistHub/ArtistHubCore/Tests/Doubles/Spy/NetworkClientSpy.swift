@@ -2,8 +2,8 @@ import ArtistHubCore
 
 class NetworkClientSpy<T: TestDataAccessible>: NetworkClientType {
 
-    var stubbedDataTaskResult: Result<T.TestDataType, ApiError> = .success(T.testData)
-    var stubbedDownloadTaskResult: Result<Data, ApiError> = .success(Data())
+    var stubbedDataTaskResult: Result<T.TestDataType, ApiError> = .failure(.generalError)
+    var stubbedDownloadTaskResult: Result<Data, ApiError> = .failure(.generalError)
     var stubbedTask: NetworkTaskSpy! = NetworkTaskSpy()
 
     private(set) var capturedUrl: [String] = []

@@ -8,20 +8,19 @@ protocol ListViewControllerDelegate: AnyObject {
 
 final class ListViewController: UIViewController, ListViewControllerType {
 
-    enum Section: Int {
-        case main = 40
-    }
-
     weak var delegate: ListViewControllerDelegate?
 
     private lazy var listView = ListView()
-    private lazy var dataSource = makeDataSource()
+    private lazy var listViewDataSource = ListViewDataSource(collectionView: listView.collectionView)
+
     private let artistListService: ArtistListServiceType
+    private let listViewDelegate: ListViewDelegate
 
     // MARK: - Initialization
 
-    init(artistListService: ArtistListServiceType) {
+    init(artistListService: ArtistListServiceType, imageManager: ImageManagerType) {
         self.artistListService = artistListService
+        self.listViewDelegate = ListViewDelegate(imageManager: imageManager)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -34,44 +33,29 @@ final class ListViewController: UIViewController, ListViewControllerType {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Artist Hub"
+        setUpList()
         loadData()
     }
 
     // MARK: - Private
 
-    private func makeDataSource() -> UICollectionViewDiffableDataSource<Section, Artist> {
-        listView.collectionView.register(ListViewCell.self, forCellWithReuseIdentifier: "cell")
-        return UICollectionViewDiffableDataSource(collectionView: listView.collectionView) {
-            (collectionView, indexPath, model) -> UICollectionViewCell? in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? ListViewCell
-            cell?.avatarImageView.image = UIImage(named: model.avatar)
-            cell?.nameLabel.text = model.name
-            cell?.usernameLabel.text = model.username
-            cell?.descriptionLabel.text = model.description
-            cell?.dateLabel.text = model.date
-            cell?.followersLabel.text = model.followers
+    private func setUpList() {
+        listViewDelegate.collectionView = listView.collectionView
+        listViewDelegate.dataSource = listViewDataSource
 
-            return cell
-        }
+        listView.collectionView.delegate = listViewDelegate
     }
 
     private func loadData() {
         artistListService.getArtistList { [weak self] (result) in
             switch result {
             case .success(let data):
-                self?.display(list: data)
+                self?.listViewDataSource.applyChange(with: data)
             case .failure(let error):
                 // TODO: Handle error!
                 print("// TODO: handle error \(error)")
             }
         }
-    }
-
-    private func display(list: [Artist]) {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Artist>()
-        snapshot.appendSections([.main])
-        snapshot.appendItems(list)
-        dataSource.apply(snapshot, animatingDifferences: true)
     }
 
     // MARK: - Required initializer

@@ -1,4 +1,4 @@
-public struct ArtistListServiceFactory {
+public struct ImageServiceFactory {
 
     // MARK: - Initialization
 
@@ -6,10 +6,10 @@ public struct ArtistListServiceFactory {
 
     // MARK: - Public
 
-    public func makeArtistListService() -> ArtistListServiceType {
+    public func makeImageService() -> ImageServiceType {
         let networkClient = NetworkClientFactory().makeNetworkClient()
         let completionDispatcher = AsyncDispatcher(dispatchQueue: DispatchQueue.main)
 
-        return ArtistListService(networkClient: networkClient, completionDispatcher: completionDispatcher)
+        return ImageService(networkClient: networkClient, completionDispatcher: completionDispatcher)
     }
 }

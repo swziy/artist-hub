@@ -3,14 +3,16 @@ import XCTest
 
 class ListViewControllerTests: XCTestCase {
 
+    var imageManagerSpy: ImageManagerSpy!
     var artistListServiceStub: ArtistListServiceStub!
     var sut: ListViewController!
     var view: ListView!
 
     override func setUp() {
         super.setUp()
+        imageManagerSpy = ImageManagerSpy()
         artistListServiceStub = ArtistListServiceStub()
-        sut = ListViewController(artistListService: artistListServiceStub)
+        sut = ListViewController(artistListService: artistListServiceStub, imageManager: imageManagerSpy)
         view = sut.view as? ListView
     }
 
@@ -24,7 +26,7 @@ class ListViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.title, "Artist Hub")
     }
 
-    func test_whenViewIsLoaded_shouldRegisterCellForIndentifier() {
+    func test_whenViewIsLoaded_shouldRegisterCellForIdentifier() {
         let cell = view.collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: IndexPath(row: 0, section: 0))
         XCTAssertTrue(cell is ListViewCell)
     }

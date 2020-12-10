@@ -10,7 +10,21 @@ extension Artist {
             username: "@gogh",
             date: "2w",
             description: description(for: id),
-            followers: "2.1M Followers"
+            followers: "2.1M Followers",
+            isFavorite: false
+        )
+    }
+
+    static func testData(with id: Int, favorite: Bool) -> Artist {
+        .init(
+            id: id,
+            avatar: "vincent",
+            name: "Vincent van Gogh - \(id)",
+            username: "@gogh",
+            date: "2w",
+            description: description(for: id),
+            followers: "2.1M Followers",
+            isFavorite: favorite
         )
     }
 

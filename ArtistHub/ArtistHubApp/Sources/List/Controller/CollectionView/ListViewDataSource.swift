@@ -7,6 +7,8 @@ enum Section: Int {
 
 final class ListViewDataSource: UICollectionViewDiffableDataSource<Section, Artist> {
 
+    private let persistentClient: PersistenceClientType = PersistenceClientFactory().makePersistenceClient()
+
     // MARK: - Initialization
 
     init(collectionView: UICollectionView) {
@@ -19,6 +21,7 @@ final class ListViewDataSource: UICollectionViewDiffableDataSource<Section, Arti
             cell?.descriptionLabel.text = model.description
             cell?.dateLabel.text = model.date
             cell?.followersLabel.text = model.followers
+            cell?.favouriteButton.isSelected = model.isFavorite
 
             return cell
         }
@@ -27,9 +30,19 @@ final class ListViewDataSource: UICollectionViewDiffableDataSource<Section, Arti
     // MARK: - Public
 
     func applyChange(with data: [Artist]) {
+        let mappedData: [Artist] = data.map { artist in
+            let persistentStoreResult = persistentClient.fetch(request: artist.fetchRequest())
+            let persistentObject = try? persistentStoreResult.get().first
+            guard let stored = persistentObject else {
+                return artist
+            }
+
+            return artist.copy(isFavorite: stored.isFavorite)
+        }
+
         var snapshot = NSDiffableDataSourceSnapshot<Section, Artist>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(data)
+        snapshot.appendItems(mappedData)
         apply(snapshot, animatingDifferences: true)
     }
 }

@@ -7,6 +7,7 @@ final class ListViewDelegate: NSObject, UICollectionViewDelegate {
     weak var dataSource: UICollectionViewDiffableDataSource<Section, Artist>?
 
     private let imageManager: ImageManagerType
+    private let persistentClient: PersistenceClientType = PersistenceClientFactory().makePersistenceClient()
 
     // MARK: - Initialization
 
@@ -42,5 +43,22 @@ final class ListViewDelegate: NSObject, UICollectionViewDelegate {
         }
 
         imageManager.cancelImage(for: item.avatar)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let item = dataSource?.itemIdentifier(for: indexPath) else {
+            return
+        }
+
+        guard var snapshot = dataSource?.snapshot() else {
+            return
+        }
+
+        let updatedItem = item.copy(isFavorite: !item.isFavorite)
+        _ = persistentClient.saveOrUpdate(object: updatedItem)
+
+        snapshot.insertItems([updatedItem], afterItem: item)
+        snapshot.deleteItems([item])
+        dataSource?.apply(snapshot, animatingDifferences: true)
     }
 }

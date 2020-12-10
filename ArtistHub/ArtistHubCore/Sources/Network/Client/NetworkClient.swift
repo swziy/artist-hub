@@ -12,20 +12,14 @@ final class NetworkClient: NetworkClientType {
     // MARK: - NetworkClientType
 
     @discardableResult
-    func request<R: Decodable>(
-        url: String,
-        completion: @escaping (Result<R, ApiError>) -> Void
-    ) -> NetworkTaskType? {
+    func request<R: Decodable>(url: String, completion: @escaping (Result<R, ApiError>) -> Void) -> NetworkTaskType? {
         let task = try? dataTask(url: url, completion: completion)
         task?.resume()
         return task
     }
 
     @discardableResult
-    func download(
-        url: String,
-        completion: @escaping (Result<Data, ApiError>) -> Void
-    ) -> NetworkTaskType? {
+    func download(url: String, completion: @escaping (Result<Data, ApiError>) -> Void) -> NetworkTaskType? {
         let task = try? downloadTask(url: url, completion: completion)
         task?.resume()
         return task

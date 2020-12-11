@@ -109,6 +109,7 @@
 		3EA095AF2573CBFE00AA6AAB /* ListRouterFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */; };
 		3EB76F0A2571486400DFDD0A /* UIWindowDefaultExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */; };
 		3EB76F2C25714CD800DFDD0A /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */; };
+		3EC5F5C62583DF1800C8C7F0 /* ListViewRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5F5C52583DF1800C8C7F0 /* ListViewRepositoryStub.swift */; };
 		3ED0F6E7257AA28C00571636 /* DispatcherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0F6E6257AA28C00571636 /* DispatcherType.swift */; };
 		3ED0F6EF257AA2F000571636 /* AsyncDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0F6EE257AA2F000571636 /* AsyncDispatcher.swift */; };
 		3ED0F6FD257AA3DB00571636 /* SyncDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0F6FC257AA3DB00571636 /* SyncDispatcher.swift */; };
@@ -144,10 +145,13 @@
 		C6F4D1C8BACD694B9B82CA9D /* ImageServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D1A8851F5D4D7242AB1C /* ImageServiceType.swift */; };
 		C6F4D1D5013DFD5B3C587E03 /* ImageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D2AB7136387AC5C039E0 /* ImageServiceTests.swift */; };
 		C6F4D202F74386174C3B76C6 /* DigestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D163516863877CA2FCFB /* DigestTests.swift */; };
+		C6F4D2A222BD59F7344A2B1F /* ListViewRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D112D0C99EB6BE54A3E9 /* ListViewRepositoryFactory.swift */; };
 		C6F4D30C16F13021CCD095FD /* ImageManagerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DEAAE8CEF163CE66C5EF /* ImageManagerSpy.swift */; };
 		C6F4D37F8E25E6C7C6DEA515 /* ImageCacheFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DD3A240F9F489C30894C /* ImageCacheFactoryType.swift */; };
+		C6F4D3CBD7881F8328BECDAE /* ListViewRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D5F6FAF2294EB5BB3640 /* ListViewRepositoryTests.swift */; };
 		C6F4D3D564CFCCEBD5952071 /* NSManagedContextStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DD955ABAFFACD49AA3D2 /* NSManagedContextStub.swift */; };
 		C6F4D468B1AE59551A682D9B /* ImageServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D57BA247054B0D606F1B /* ImageServiceSpy.swift */; };
+		C6F4D4716075FFDBDD3D38C4 /* PersistenceClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DCFFD6179C451BB40D4D /* PersistenceClientStub.swift */; };
 		C6F4D47501B1374743B70B54 /* ImageServiceFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D6D4F3D6C0366D598393 /* ImageServiceFactoryTests.swift */; };
 		C6F4D6500989F5AEC9723C48 /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D660D15BC5FEAEB37C80 /* ImageCacheTests.swift */; };
 		C6F4D6B866C0FD620B3084C3 /* Void+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DF4A95352EF02F1AC595 /* Void+TestData.swift */; };
@@ -160,11 +164,15 @@
 		C6F4DA31C10C04D8FCE1C8DE /* ImageCacheFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D818DA7424D8F26A922D /* ImageCacheFactory.swift */; };
 		C6F4DA38DC0833B5B59B0699 /* ImageManagerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DEAAE8CEF163CE66C5EF /* ImageManagerSpy.swift */; };
 		C6F4DAC78D1BCC1B885A0CE2 /* PersistentContainerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D9F7A7CF21390E958DE3 /* PersistentContainerFactoryTests.swift */; };
+		C6F4DB21B110C4B24C9C1A9E /* ListViewRepositoryFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D1C4638D9A6967DD424C /* ListViewRepositoryFactoryTests.swift */; };
+		C6F4DBF8D760E41CD9226460 /* PersistenceClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DCFFD6179C451BB40D4D /* PersistenceClientStub.swift */; };
 		C6F4DC2A9B29108C3B5A0492 /* NetworkTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DBFE6701DEBADA7C78C6 /* NetworkTaskType.swift */; };
 		C6F4DC4C377EF9D690A4AE5E /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D7F84812DCFB49837B70 /* Digest.swift */; };
 		C6F4DE0ECBB78CBD9DBDCAFA /* UIImage+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DCBA8436AAEC4AC25516 /* UIImage+TestData.swift */; };
+		C6F4DF28D44E3DE92279608A /* ListViewRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D8944FDE7A8EB13E16CE /* ListViewRepositoryType.swift */; };
 		C6F4DF5335130B7C624240FB /* ImageServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DE8994AD40A2A69FF9AA /* ImageServiceFactory.swift */; };
 		C6F4DF8DC44E7C66CB7DED2B /* PersistentContainerFactoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D27C40C205CAF903B00F /* PersistentContainerFactoryStub.swift */; };
+		C6F4DFF60B7775F7520EF31A /* ListViewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D550787314095C9D1F4F /* ListViewRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -340,6 +348,7 @@
 		3EA095AE2573CBFE00AA6AAB /* ListRouterFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterFactoryType.swift; sourceTree = "<group>"; };
 		3EB76F092571486400DFDD0A /* UIWindowDefaultExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowDefaultExtensionTests.swift; sourceTree = "<group>"; };
 		3EB76F2B25714CD800DFDD0A /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		3EC5F5C52583DF1800C8C7F0 /* ListViewRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewRepositoryStub.swift; sourceTree = "<group>"; };
 		3ED0F6E6257AA28C00571636 /* DispatcherType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatcherType.swift; sourceTree = "<group>"; };
 		3ED0F6EE257AA2F000571636 /* AsyncDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncDispatcher.swift; sourceTree = "<group>"; };
 		3ED0F6FC257AA3DB00571636 /* SyncDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncDispatcher.swift; sourceTree = "<group>"; };
@@ -370,17 +379,22 @@
 		3EE4948D2574F88C005C8A05 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3EE4949B2574FAB7005C8A05 /* DetailsRouterFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterFactoryTests.swift; sourceTree = "<group>"; };
 		C6F4D06836A417EE7582177A /* ImageManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
+		C6F4D112D0C99EB6BE54A3E9 /* ListViewRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewRepositoryFactory.swift; sourceTree = "<group>"; };
 		C6F4D163516863877CA2FCFB /* DigestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigestTests.swift; sourceTree = "<group>"; };
 		C6F4D1A8851F5D4D7242AB1C /* ImageServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceType.swift; sourceTree = "<group>"; };
+		C6F4D1C4638D9A6967DD424C /* ListViewRepositoryFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewRepositoryFactoryTests.swift; sourceTree = "<group>"; };
 		C6F4D27C40C205CAF903B00F /* PersistentContainerFactoryStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentContainerFactoryStub.swift; sourceTree = "<group>"; };
 		C6F4D2850E418B310FBFDDBE /* ImageCacheFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheFactoryTests.swift; sourceTree = "<group>"; };
 		C6F4D2AB7136387AC5C039E0 /* ImageServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceTests.swift; sourceTree = "<group>"; };
 		C6F4D3204A6D531563D276AF /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		C6F4D550787314095C9D1F4F /* ListViewRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewRepository.swift; sourceTree = "<group>"; };
 		C6F4D57BA247054B0D606F1B /* ImageServiceSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceSpy.swift; sourceTree = "<group>"; };
+		C6F4D5F6FAF2294EB5BB3640 /* ListViewRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewRepositoryTests.swift; sourceTree = "<group>"; };
 		C6F4D660D15BC5FEAEB37C80 /* ImageCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
 		C6F4D6D4F3D6C0366D598393 /* ImageServiceFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceFactoryTests.swift; sourceTree = "<group>"; };
 		C6F4D7F84812DCFB49837B70 /* Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Digest.swift; sourceTree = "<group>"; };
 		C6F4D818DA7424D8F26A922D /* ImageCacheFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheFactory.swift; sourceTree = "<group>"; };
+		C6F4D8944FDE7A8EB13E16CE /* ListViewRepositoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewRepositoryType.swift; sourceTree = "<group>"; };
 		C6F4D93267AA5FC01A0C223B /* HTTPURLResponse+TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+TestData.swift"; sourceTree = "<group>"; };
 		C6F4D9F7A7CF21390E958DE3 /* PersistentContainerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentContainerFactoryTests.swift; sourceTree = "<group>"; };
 		C6F4DA178D6B7536B8EBC558 /* ImageManagerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManagerFactoryTests.swift; sourceTree = "<group>"; };
@@ -388,6 +402,7 @@
 		C6F4DB4E6CD185325EDD1E0C /* PersistenceClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceClientTests.swift; sourceTree = "<group>"; };
 		C6F4DBFE6701DEBADA7C78C6 /* NetworkTaskType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTaskType.swift; sourceTree = "<group>"; };
 		C6F4DCBA8436AAEC4AC25516 /* UIImage+TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TestData.swift"; sourceTree = "<group>"; };
+		C6F4DCFFD6179C451BB40D4D /* PersistenceClientStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceClientStub.swift; sourceTree = "<group>"; };
 		C6F4DD3A240F9F489C30894C /* ImageCacheFactoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheFactoryType.swift; sourceTree = "<group>"; };
 		C6F4DD955ABAFFACD49AA3D2 /* NSManagedContextStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedContextStub.swift; sourceTree = "<group>"; };
 		C6F4DE3EB0DE642C980F33C9 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
@@ -1005,6 +1020,7 @@
 			children = (
 				3EE494272574D97B005C8A05 /* Controller */,
 				3E5DEF922573DAB9003CF008 /* Router */,
+				C6F4D46A5D818067FD450BC5 /* Repository */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -1231,6 +1247,7 @@
 			children = (
 				3EA0959525715C9C00AA6AAB /* Controller */,
 				3EA0958625715BD000AA6AAB /* Router */,
+				C6F4D6B4D879F6B674BF4ED7 /* Repository */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -1311,6 +1328,7 @@
 				C6F4D27C40C205CAF903B00F /* PersistentContainerFactoryStub.swift */,
 				C6F4DEB368C005E1D55F1904 /* NSPersistentContainerStub.swift */,
 				C6F4DD955ABAFFACD49AA3D2 /* NSManagedContextStub.swift */,
+				C6F4DCFFD6179C451BB40D4D /* PersistenceClientStub.swift */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -1442,6 +1460,7 @@
 			isa = PBXGroup;
 			children = (
 				3EE494622574DDB4005C8A05 /* DetailsControllerFactoryStub.swift */,
+				3EC5F5C52583DF1800C8C7F0 /* ListViewRepositoryStub.swift */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -1471,6 +1490,15 @@
 			path = Container;
 			sourceTree = "<group>";
 		};
+		C6F4D46A5D818067FD450BC5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C6F4DE3E267579E7A57A76B0 /* Factory */,
+				C6F4D5F6FAF2294EB5BB3640 /* ListViewRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		C6F4D6A917D814C6AA1DDF66 /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -1479,6 +1507,16 @@
 				C6F4D3204A6D531563D276AF /* ImageService.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		C6F4D6B4D879F6B674BF4ED7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C6F4D550787314095C9D1F4F /* ListViewRepository.swift */,
+				C6F4D8944FDE7A8EB13E16CE /* ListViewRepositoryType.swift */,
+				C6F4DDE352316F8E80B84F35 /* Factory */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		C6F4D79006CFFAE6270B36AA /* Factory */ = {
@@ -1523,12 +1561,28 @@
 			path = ConvertibleTypes;
 			sourceTree = "<group>";
 		};
+		C6F4DDE352316F8E80B84F35 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				C6F4D112D0C99EB6BE54A3E9 /* ListViewRepositoryFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		C6F4DE1A1CC375EFA0680374 /* Client */ = {
 			isa = PBXGroup;
 			children = (
 				C6F4DB4E6CD185325EDD1E0C /* PersistenceClientTests.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		C6F4DE3E267579E7A57A76B0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				C6F4D1C4638D9A6967DD424C /* ListViewRepositoryFactoryTests.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		C6F4DF59525FAC6C667436F1 /* ImageCache */ = {
@@ -1864,6 +1918,9 @@
 				3E5DEF4B2573D116003CF008 /* DetailsViewController.swift in Sources */,
 				3E5DEF272573CED4003CF008 /* ListControllerFactoryType.swift in Sources */,
 				3E5DEF0A2573CCF2003CF008 /* ListRouterFactory.swift in Sources */,
+				C6F4DFF60B7775F7520EF31A /* ListViewRepository.swift in Sources */,
+				C6F4DF28D44E3DE92279608A /* ListViewRepositoryType.swift in Sources */,
+				C6F4D2A222BD59F7344A2B1F /* ListViewRepositoryFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1883,6 +1940,7 @@
 				3EE494712574DFB2005C8A05 /* NavigationControllerSpy.swift in Sources */,
 				3EE4942A2574D9D4005C8A05 /* ListControllerFactoryTests.swift in Sources */,
 				3EA095782571553600AA6AAB /* ApplicationRouterTests.swift in Sources */,
+				3EC5F5C62583DF1800C8C7F0 /* ListViewRepositoryStub.swift in Sources */,
 				3E5DEF752573D6AB003CF008 /* ListRouterFactorySpy.swift in Sources */,
 				3EE154282577A58B008AB2C2 /* NavigationBarAppearanceConfiguratorSpy.swift in Sources */,
 				3E30F89325790F8F00CB7A0A /* ListViewControllerTests.swift in Sources */,
@@ -1894,6 +1952,9 @@
 				3EE494632574DDB4005C8A05 /* DetailsControllerFactoryStub.swift in Sources */,
 				3EB76F2C25714CD800DFDD0A /* AppDelegateTests.swift in Sources */,
 				C6F4DA38DC0833B5B59B0699 /* ImageManagerSpy.swift in Sources */,
+				C6F4DB21B110C4B24C9C1A9E /* ListViewRepositoryFactoryTests.swift in Sources */,
+				C6F4D3CBD7881F8328BECDAE /* ListViewRepositoryTests.swift in Sources */,
+				C6F4D4716075FFDBDD3D38C4 /* PersistenceClientStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1997,6 +2058,7 @@
 				C6F4D9BEBAB5A0CDB957721C /* PersistenceClientTests.swift in Sources */,
 				C6F4DAC78D1BCC1B885A0CE2 /* PersistentContainerFactoryTests.swift in Sources */,
 				C6F4D3D564CFCCEBD5952071 /* NSManagedContextStub.swift in Sources */,
+				C6F4DBF8D760E41CD9226460 /* PersistenceClientStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

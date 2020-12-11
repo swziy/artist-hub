@@ -6,9 +6,9 @@ class ListControllerFactory: ListControllerFactoryType {
     // MARK: - ListControllerFactoryType
 
     func makeListController() -> ListViewControllerType {
-        let artistListService = ArtistListServiceFactory().makeArtistListService()
+        let listViewRepository = ListViewRepositoryFactory().makeListViewRepository()
         let imageManager = ImageManagerFactory().makeImageManager()
 
-        return ListViewController(artistListService: artistListService, imageManager: imageManager)
+        return ListViewController(listViewRepository: listViewRepository, imageManager: imageManager)
     }
 }

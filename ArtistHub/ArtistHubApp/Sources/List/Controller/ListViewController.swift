@@ -11,15 +11,15 @@ final class ListViewController: UIViewController, ListViewControllerType {
     weak var delegate: ListViewControllerDelegate?
 
     private lazy var listView = ListView()
-    private lazy var listViewDataSource = ListViewDataSource(collectionView: listView.collectionView)
+    private lazy var listViewDataSource = ListViewDataSource(collectionView: listView.collectionView, listViewRepository: listViewRepository)
 
-    private let artistListService: ArtistListServiceType
     private let listViewDelegate: ListViewDelegate
+    private let listViewRepository: ListViewRepositoryType
 
     // MARK: - Initialization
 
-    init(artistListService: ArtistListServiceType, imageManager: ImageManagerType) {
-        self.artistListService = artistListService
+    init(listViewRepository: ListViewRepositoryType, imageManager: ImageManagerType) {
+        self.listViewRepository = listViewRepository
         self.listViewDelegate = ListViewDelegate(imageManager: imageManager)
         super.init(nibName: nil, bundle: nil)
     }
@@ -41,13 +41,13 @@ final class ListViewController: UIViewController, ListViewControllerType {
 
     private func setUpList() {
         listViewDelegate.collectionView = listView.collectionView
-        listViewDelegate.dataSource = listViewDataSource
+        listViewDelegate.listViewDataSource = listViewDataSource
 
         listView.collectionView.delegate = listViewDelegate
     }
 
     private func loadData() {
-        artistListService.getArtistList { [weak self] (result) in
+        listViewRepository.load { [weak self] result in
             switch result {
             case .success(let data):
                 self?.listViewDataSource.applyChange(with: data)

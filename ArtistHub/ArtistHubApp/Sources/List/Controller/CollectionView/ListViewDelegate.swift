@@ -4,10 +4,9 @@ import UIKit
 final class ListViewDelegate: NSObject, UICollectionViewDelegate {
 
     weak var collectionView: UICollectionView?
-    weak var dataSource: UICollectionViewDiffableDataSource<Section, Artist>?
+    weak var listViewDataSource: ListViewDataSource?
 
     private let imageManager: ImageManagerType
-    private let persistentClient: PersistenceClientType = PersistenceClientFactory().makePersistenceClient()
 
     // MARK: - Initialization
 
@@ -18,7 +17,11 @@ final class ListViewDelegate: NSObject, UICollectionViewDelegate {
     // MARK: - UICollectionViewDelegate
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard let item = dataSource?.itemIdentifier(for: indexPath) else {
+        guard let identifier = listViewDataSource?.dataSource.itemIdentifier(for: indexPath) else {
+            return
+        }
+
+        guard let item = listViewDataSource?.data[identifier] else {
             return
         }
 
@@ -38,27 +41,14 @@ final class ListViewDelegate: NSObject, UICollectionViewDelegate {
     }
 
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard let item = dataSource?.itemIdentifier(for: indexPath) else {
+        guard let identifier = listViewDataSource?.dataSource.itemIdentifier(for: indexPath) else {
+            return
+        }
+
+        guard let item = listViewDataSource?.data[identifier] else {
             return
         }
 
         imageManager.cancelImage(for: item.avatar)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let item = dataSource?.itemIdentifier(for: indexPath) else {
-            return
-        }
-
-        guard var snapshot = dataSource?.snapshot() else {
-            return
-        }
-
-        let updatedItem = item.copy(isFavorite: !item.isFavorite)
-        _ = persistentClient.saveOrUpdate(object: updatedItem)
-
-        snapshot.insertItems([updatedItem], afterItem: item)
-        snapshot.deleteItems([item])
-        dataSource?.apply(snapshot, animatingDifferences: true)
     }
 }

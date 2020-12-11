@@ -1,6 +1,6 @@
 import ArtistHubCore
 
-struct ArtistListServiceStub: ArtistListServiceType {
+class ArtistListServiceStub: ArtistListServiceType {
 
     var stubbedResult: Result<[Artist], ApiError> = .success(.testData)
 

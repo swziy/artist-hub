@@ -1,6 +1,6 @@
-import UIKit
 import ArtistHubCore
 import ArtistHubUserInterface
+import UIKit
 
 protocol ListViewControllerDelegate: AnyObject {
     func didSelectDetail(with id: String)

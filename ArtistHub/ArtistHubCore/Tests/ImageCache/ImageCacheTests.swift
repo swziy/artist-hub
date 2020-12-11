@@ -1,5 +1,5 @@
-import XCTest
 import UIKit
+import XCTest
 @testable import ArtistHubCore
 
 class ImageCacheTests: XCTestCase {

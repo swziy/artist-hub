@@ -1,5 +1,5 @@
-import XCTest
 import Foundation
+import XCTest
 @testable import ArtistHubCore
 
 class TaskSchedulerTests: XCTestCase {

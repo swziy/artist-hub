@@ -1,5 +1,5 @@
-import XCTest
 import ArtistHubCore
+import XCTest
 @testable import ArtistHubApp
 
 class ListViewRepositoryTests: XCTestCase {

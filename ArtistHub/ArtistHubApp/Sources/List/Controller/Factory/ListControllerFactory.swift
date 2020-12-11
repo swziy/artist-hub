@@ -1,5 +1,5 @@
-import UIKit
 import ArtistHubCore
+import UIKit
 
 class ListControllerFactory: ListControllerFactoryType {
 

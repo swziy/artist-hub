@@ -1,5 +1,5 @@
-import XCTest
 import CoreData
+import XCTest
 @testable import ArtistHubCore
 
 class PersistentContainerFactoryTests: XCTestCase {

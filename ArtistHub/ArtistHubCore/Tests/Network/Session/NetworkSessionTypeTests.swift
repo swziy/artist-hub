@@ -1,6 +1,6 @@
+import ArtistHubCore
 import Foundation
 import XCTest
-import ArtistHubCore
 
 class NetworkSessionTypeTest: XCTestCase {
 

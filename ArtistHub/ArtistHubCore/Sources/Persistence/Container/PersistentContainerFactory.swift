@@ -11,7 +11,7 @@ struct PersistentContainerFactory: PersistentContainerFactoryType {
             return .success(container)
         }
 
-        guard let model = NSManagedObjectModel.mergedModel(from: [Bundle.main]) else {
+        guard let model = NSManagedObjectModel.mergedModel(from: [Bundle(for: PersistenceClient.self)]) else {
             return .failure(.storeLoadError)
         }
 

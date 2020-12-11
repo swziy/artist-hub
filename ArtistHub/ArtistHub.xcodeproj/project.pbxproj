@@ -98,9 +98,8 @@
 		3E75EAFC2582223B00D41E4E /* PersistentContainerFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75EAFB2582223B00D41E4E /* PersistentContainerFactoryType.swift */; };
 		3E75EB04258222C700D41E4E /* PersistentContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75EB03258222C700D41E4E /* PersistentContainerFactory.swift */; };
 		3E75EB0D2582246300D41E4E /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75EB0C2582246300D41E4E /* PersistenceError.swift */; };
-		3E75EBC32582467E00D41E4E /* MainDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E75EA5C25820E0100D41E4E /* MainDataModel.xcdatamodeld */; };
 		3E75EC0E2582A77400D41E4E /* PersistenceClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75EC0D2582A77400D41E4E /* PersistenceClientFactory.swift */; };
-		3E75EC5D2582ADCC00D41E4E /* MainDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E75EA5C25820E0100D41E4E /* MainDataModel.xcdatamodeld */; };
+		3E75EC822583608600D41E4E /* NSPersistentContainerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DEB368C005E1D55F1904 /* NSPersistentContainerStub.swift */; };
 		3EA095672571506400AA6AAB /* ApplicationRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA095662571506400AA6AAB /* ApplicationRouterSpy.swift */; };
 		3EA095782571553600AA6AAB /* ApplicationRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA095762571553600AA6AAB /* ApplicationRouterTests.swift */; };
 		3EA0958825715C4E00AA6AAB /* ListRouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0958725715C4E00AA6AAB /* ListRouterType.swift */; };
@@ -163,7 +162,6 @@
 		C6F4DAC78D1BCC1B885A0CE2 /* PersistentContainerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D9F7A7CF21390E958DE3 /* PersistentContainerFactoryTests.swift */; };
 		C6F4DC2A9B29108C3B5A0492 /* NetworkTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DBFE6701DEBADA7C78C6 /* NetworkTaskType.swift */; };
 		C6F4DC4C377EF9D690A4AE5E /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D7F84812DCFB49837B70 /* Digest.swift */; };
-		C6F4DCF097488626825E4FCC /* NSPersistentContainerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DEB368C005E1D55F1904 /* NSPersistentContainerStub.swift */; };
 		C6F4DE0ECBB78CBD9DBDCAFA /* UIImage+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DCBA8436AAEC4AC25516 /* UIImage+TestData.swift */; };
 		C6F4DF5335130B7C624240FB /* ImageServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DE8994AD40A2A69FF9AA /* ImageServiceFactory.swift */; };
 		C6F4DF8DC44E7C66CB7DED2B /* PersistentContainerFactoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D27C40C205CAF903B00F /* PersistentContainerFactoryStub.swift */; };
@@ -1860,7 +1858,6 @@
 				3EA0958825715C4E00AA6AAB /* ListRouterType.swift in Sources */,
 				3E5DEF6D2573D404003CF008 /* DetailsView.swift in Sources */,
 				3EE494402574DC6D005C8A05 /* DetailsViewControllerType.swift in Sources */,
-				3E75EC5D2582ADCC00D41E4E /* MainDataModel.xcdatamodeld in Sources */,
 				3EA0959725715CC500AA6AAB /* ListViewController.swift in Sources */,
 				3E5DEF5C2573D311003CF008 /* DetailsControllerFactory.swift in Sources */,
 				3E279DD42571157000144915 /* ApplicationRouterType.swift in Sources */,
@@ -1954,7 +1951,6 @@
 				C6F4D37F8E25E6C7C6DEA515 /* ImageCacheFactoryType.swift in Sources */,
 				C6F4DA31C10C04D8FCE1C8DE /* ImageCacheFactory.swift in Sources */,
 				C6F4DC4C377EF9D690A4AE5E /* Digest.swift in Sources */,
-				C6F4DCF097488626825E4FCC /* NSPersistentContainerStub.swift in Sources */,
 				C6F4D9FF3E0CCBBD9C63A631 /* EntityConvertibleType.swift in Sources */,
 				C6F4D7B7342213EDA12CCC52 /* DomainConvertibleType.swift in Sources */,
 			);
@@ -1966,7 +1962,6 @@
 			files = (
 				3E30F8D0257A8DA800CB7A0A /* TaskSchedulerTests.swift in Sources */,
 				3E05E074257F959900571294 /* TestDataAccessible.swift in Sources */,
-				3E75EBC32582467E00D41E4E /* MainDataModel.xcdatamodeld in Sources */,
 				3ED0F707257AA6B300571636 /* DispatcherStub.swift in Sources */,
 				3E05E021257F8FBF00571294 /* ArtistListServiceFactoryTests.swift in Sources */,
 				3E05DFA1257E78F300571294 /* NetworkSessionFactoryTests.swift in Sources */,
@@ -1997,6 +1992,7 @@
 				C6F4D468B1AE59551A682D9B /* ImageServiceSpy.swift in Sources */,
 				C6F4D7C8D2C1A4548987AEBC /* ImageManagerTests.swift in Sources */,
 				C6F4D6EF845BC96FEFC2D6F6 /* ImageCacheSpy.swift in Sources */,
+				3E75EC822583608600D41E4E /* NSPersistentContainerStub.swift in Sources */,
 				C6F4DF8DC44E7C66CB7DED2B /* PersistentContainerFactoryStub.swift in Sources */,
 				C6F4D9BEBAB5A0CDB957721C /* PersistenceClientTests.swift in Sources */,
 				C6F4DAC78D1BCC1B885A0CE2 /* PersistentContainerFactoryTests.swift in Sources */,

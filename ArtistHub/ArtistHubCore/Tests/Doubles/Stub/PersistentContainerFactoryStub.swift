@@ -16,7 +16,7 @@ class PersistentContainerFactoryStub: PersistentContainerFactoryType {
     }()
 
     lazy var stubbedResult: Result<NSPersistentContainer, PersistenceError>  = .success(stubbedContainer)
-    private static let model = NSManagedObjectModel.mergedModel(from: [.test])!
+    private static let model = NSManagedObjectModel.mergedModel(from: [Bundle(for: PersistenceClient.self)])!
 
     // MARK: - PersistentContainerFactoryType
 

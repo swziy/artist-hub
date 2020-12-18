@@ -1,13 +1,9 @@
 import ArtistHubCore
 import UIKit
 
-enum Section: String {
-    case main = "ListViewCell"
-}
-
 final class ListViewDataSource {
 
-    lazy var dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) {
+    private(set) lazy var dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) {
         [unowned self] (collectionView, indexPath, identifier) -> UICollectionViewCell? in
         guard let model = self.data[identifier] else {
             return nil
@@ -21,13 +17,18 @@ final class ListViewDataSource {
         cell?.dateLabel.text = model.date
         cell?.followersLabel.text = model.followers
         cell?.favouriteButton.isSelected = model.isFavorite
-        cell?.favouriteButton.addTarget(self, action: #selector(ListViewDataSource.didTapFavoriteButton), for: .touchUpInside)
+        cell?.favouriteButton.addTarget(
+            self,
+            action: #selector(ListViewDataSource.didTapFavoriteButton),
+            for: .touchUpInside
+        )
 
         return cell
     }
 
     private(set) var data: [Int: Artist] = [:]
 
+    private var selectedTab: Int = 0
     private let collectionView: UICollectionView
     private let listViewRepository: ListViewRepositoryType
 
@@ -36,7 +37,13 @@ final class ListViewDataSource {
     init(collectionView: UICollectionView, listViewRepository: ListViewRepositoryType) {
         self.collectionView = collectionView
         self.listViewRepository = listViewRepository
-        self.collectionView.register(ListViewCell.self, forCellWithReuseIdentifier: Section.main.rawValue)
+        self.collectionView.register(ListViewCell.self, forCellWithReuseIdentifier: Section.main.cellIdentifier)
+        self.collectionView.register(
+            ListViewHeader.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: Section.main.headerIdentifier
+        )
+        setUpSupplementaryItemProvider()
     }
 
     func applyChange(with data: [Artist]) {
@@ -48,7 +55,13 @@ final class ListViewDataSource {
         dataSource.apply(snapshot, animatingDifferences: true)
     }
 
-    // MARK: - Private
+    // MARK: - Action
+
+    @objc private func didChangeSegmentedControl(sender: UISegmentedControl) {
+        selectedTab = sender.selectedSegmentIndex
+        let ids = sender.selectedSegmentIndex == 0 ? allIds() : favoriteIds()
+        animatedDifference(with: ids)
+    }
 
     @objc private func didTapFavoriteButton(sender: UIButton) {
         let point = collectionView.convert(sender.center, from: sender.superview)
@@ -74,5 +87,45 @@ final class ListViewDataSource {
         UIView.transition(with: sender, duration: 0.2, options: .transitionCrossDissolve) {
             sender.isSelected = copy.isFavorite
         }
+
+        if selectedTab == 1 {
+            animatedDifference(with: favoriteIds())
+        }
+    }
+
+    // MARK: - Private
+
+    private func setUpSupplementaryItemProvider() {
+        dataSource.supplementaryViewProvider = {
+            [unowned self] (collectionView, identifier, indexPath) -> UICollectionViewCell? in
+            let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionHeader,
+                withReuseIdentifier: Section.main.headerIdentifier,
+                for: indexPath
+            ) as? ListViewHeader
+
+            header?.segmentedControl.addTarget(
+                self,
+                action: #selector(ListViewDataSource.didChangeSegmentedControl),
+                for: .valueChanged)
+
+            return header
+        }
+    }
+
+    private func allIds() -> [Int] {
+        data.values.sorted { $0.id < $1.id }.map { $0.id }
+    }
+
+    private func favoriteIds() -> [Int] {
+        data.values.sorted { $0.id < $1.id }.filter { $0.isFavorite }.map { $0.id }
+    }
+
+    private func animatedDifference(with ids: [Int]) {
+        var snapshot = dataSource.snapshot()
+        snapshot.deleteAllItems()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(ids)
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
 }

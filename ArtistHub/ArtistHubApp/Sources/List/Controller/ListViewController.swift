@@ -13,6 +13,7 @@ final class ListViewController: UIViewController, ListViewControllerType {
     private lazy var listView = ListView()
     private lazy var listViewDataSource = ListViewDataSource(collectionView: listView.collectionView, listViewRepository: listViewRepository)
 
+    private let listViewStatePresenter = ListViewStatePresenter()
     private let listViewDelegate: ListViewDelegate
     private let listViewRepository: ListViewRepositoryType
 
@@ -34,6 +35,7 @@ final class ListViewController: UIViewController, ListViewControllerType {
         super.viewDidLoad()
         title = "Artist Hub"
         setUpList()
+        setUpRetryButton()
         loadData()
     }
 
@@ -46,10 +48,17 @@ final class ListViewController: UIViewController, ListViewControllerType {
         listView.collectionView.delegate = listViewDelegate
     }
 
+    private func setUpRetryButton() {
+        listView.retryButton.addTarget(
+            self,
+            action: #selector(ListViewController.retryButtonAction),
+            for: .touchUpInside
+        )
+    }
+
     private func loadData() {
-        listView.showActivityIndicator()
+        listViewStatePresenter.show(state: .loading, on: listView)
         listViewRepository.load { [weak self] result in
-            self?.listView.hideActivityIndicator()
             self?.handle(result: result)
         }
     }
@@ -57,14 +66,20 @@ final class ListViewController: UIViewController, ListViewControllerType {
     private func handle(result: Result<[Artist], ListViewError>) {
         switch result {
         case .success(let data):
+            listViewStatePresenter.show(state: .loaded, on: listView)
             listViewDataSource.applyChange(with: data)
-        case .failure(let error):
-            // TODO: Handle error!
-            print("// TODO: handle error \(error)")
+        case .failure:
+            listViewStatePresenter.show(state: .error, on: listView)
         }
     }
 
-    // MARK: - Required initializer
+    // MARK: - Actions
+
+    @objc private func retryButtonAction(sender: UIButton) {
+        loadData()
+    }
+    
+    // MARK: - Required init
 
     @available(*, unavailable)
     required init?(coder: NSCoder) { nil }

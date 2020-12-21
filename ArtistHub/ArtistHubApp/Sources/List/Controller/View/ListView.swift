@@ -1,3 +1,4 @@
+import ArtistHubUserInterface
 import UIKit
 
 final class ListView: UIView {
@@ -6,6 +7,11 @@ final class ListView: UIView {
         collectionView.backgroundColor = UIColor.Fill.lightGray
     })
 
+    var retryButton: UIButton {
+        errorView.retryButton
+    }
+
+    private let errorView = ErrorView()
     private let activityIndicator = UIActivityIndicatorView(style: .init {
         $0.style = .medium
         $0.color = UIColor.Fill.accent
@@ -31,10 +37,19 @@ final class ListView: UIView {
         activityIndicator.isHidden = true
     }
 
+    func showErrorView() {
+        errorView.isHidden = false
+    }
+
+    func hideErrorView() {
+        errorView.isHidden = true
+    }
+
     // MARK: - Subviews
 
     private func setUpViews() {
         addSubview(collectionView)
+        addSubview(errorView)
         collectionView.addSubview(activityIndicator)
     }
 
@@ -50,6 +65,10 @@ final class ListView: UIView {
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 48.0).isActive = true
         activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+
+        errorView.translatesAutoresizingMaskIntoConstraints = false
+        errorView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        errorView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
 
     // MARK: - Required init

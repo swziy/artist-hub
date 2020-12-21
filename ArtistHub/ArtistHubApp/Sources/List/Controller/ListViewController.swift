@@ -47,14 +47,20 @@ final class ListViewController: UIViewController, ListViewControllerType {
     }
 
     private func loadData() {
+        listView.showActivityIndicator()
         listViewRepository.load { [weak self] result in
-            switch result {
-            case .success(let data):
-                self?.listViewDataSource.applyChange(with: data)
-            case .failure(let error):
-                // TODO: Handle error!
-                print("// TODO: handle error \(error)")
-            }
+            self?.listView.hideActivityIndicator()
+            self?.handle(result: result)
+        }
+    }
+
+    private func handle(result: Result<[Artist], ListViewError>) {
+        switch result {
+        case .success(let data):
+            listViewDataSource.applyChange(with: data)
+        case .failure(let error):
+            // TODO: Handle error!
+            print("// TODO: handle error \(error)")
         }
     }
 

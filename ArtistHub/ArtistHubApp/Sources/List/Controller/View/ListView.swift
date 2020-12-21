@@ -7,15 +7,12 @@ final class ListView: UIView {
         collectionView.backgroundColor = UIColor.Fill.lightGray
     })
 
-    var retryButton: UIButton {
-        errorView.retryButton
-    }
-
-    private let errorView = ErrorView()
-    private let activityIndicator = UIActivityIndicatorView(style: .init {
+    let activityIndicator = UIActivityIndicatorView(style: .init {
         $0.style = .medium
         $0.color = UIColor.Fill.accent
     })
+
+    let errorView = ErrorView()
 
     // MARK: - Initialization
 

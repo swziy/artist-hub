@@ -49,7 +49,7 @@ final class ListViewController: UIViewController, ListViewControllerType {
     }
 
     private func setUpRetryButton() {
-        listView.retryButton.addTarget(
+        listView.errorView.retryButton.addTarget(
             self,
             action: #selector(ListViewController.retryButtonAction),
             for: .touchUpInside
@@ -78,7 +78,7 @@ final class ListViewController: UIViewController, ListViewControllerType {
     @objc private func retryButtonAction(sender: UIButton) {
         loadData()
     }
-    
+
     // MARK: - Required init
 
     @available(*, unavailable)

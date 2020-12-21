@@ -2,7 +2,7 @@
 
 class ListControllerFactorySpy: ListControllerFactoryType {
 
-    var stubbedController = ListViewController(listViewRepository: ListViewRepositoryStub(), imageManager: ImageManagerSpy())
+    var stubbedController = ListViewController(listViewRepository: ListViewRepositorySpy(), imageManager: ImageManagerSpy())
     private(set) var invokedMakeListController: Int = 0
 
     // MARK: - ListControllerFactoryType

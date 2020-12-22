@@ -1,3 +1,5 @@
+import ArtistHubCore
+import UIKit
 import XCTest
 @testable import ArtistHubApp
 
@@ -61,5 +63,36 @@ class ListViewControllerTests: XCTestCase {
         XCTAssertTrue(view.errorView.isHidden)
         XCTAssertEqual(view.collectionView.numberOfSections, 1)
         XCTAssertEqual(view.collectionView.numberOfItems(inSection: 0), 5)
+    }
+
+    func test_whenViewIsLoadedAndItemIsMarkedAsFavourite_shouldUpdateItemInRepository() {
+        listViewRepositorySpy.stubbedLoadResult = .success(.testData)
+        let view = delayedLoadView(ListView.self, for: sut)
+
+        let cell = view.collectionView.visibleCells[1] as! ListViewCell
+        cell.favouriteButton.sendActions(for: .touchUpInside)
+
+        XCTAssertEqual(listViewRepositorySpy.invokedUpdateWith.count, 1)
+        XCTAssertEqual(listViewRepositorySpy.invokedUpdateWith[0].id, 2)
+        XCTAssertTrue(listViewRepositorySpy.invokedUpdateWith[0].isFavorite)
+    }
+
+    func test_whenViewIsLoadedAndFavoritesAreChosen_shouldDisplayOnyFavoriteItems() {
+        listViewRepositorySpy.stubbedLoadResult = .success([
+            .testData(with: 1),
+            .testData(with: 2, favorite: true)
+        ])
+
+        let view = delayedLoadView(ListView.self, for: sut)
+        let sectionHeader = view.collectionView.supplementaryView(forElementKind: UICollectionView.elementKindSectionHeader, at: IndexPath(row: 0, section: 0)) as! ListViewHeader
+
+        sectionHeader.segmentedControl.selectedSegmentIndex = 1
+        sectionHeader.segmentedControl.sendActions(for: .valueChanged)
+
+        let cell = view.collectionView.visibleCells[0] as! ListViewCell
+
+        XCTAssertEqual(view.collectionView.visibleCells.count, 1)
+        XCTAssertEqual(cell.favouriteButton.isSelected, true)
+        XCTAssertEqual(cell.descriptionLabel.text, Artist.testData(with: 2, favorite: true).description)
     }
 }

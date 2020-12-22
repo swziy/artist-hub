@@ -83,4 +83,35 @@ class ListViewRepositoryTests: XCTestCase {
 
         XCTAssertEqual(result, true)
     }
+
+    func test_whenDataLoadedWithoutFavoriteItems_shouldReturnProperIds() {
+        artistListServiceStub.stubbedResult = .success(.testData)
+
+        var capturedResult: Result<[Artist], ListViewError>!
+        sut.load { result in
+            capturedResult = result
+        }
+
+        XCTAssertEqual(capturedResult, .success(.testData))
+        XCTAssertEqual(sut.allIds(), [1, 2, 3, 4, 5])
+        XCTAssertEqual(sut.favoriteIds(), [])
+    }
+
+    func test_whenDataLoadedWithFavoriteItems_shouldReturnProperIds() {
+        let data1 = Artist.testData(with: 1, favorite: true)
+        let data2 = Artist.testData(with: 2, favorite: false)
+        let data3 = Artist.testData(with: 4, favorite: true)
+        let data4 = Artist.testData(with: 8, favorite: false)
+        let artists = [data1, data2, data3, data4]
+        artistListServiceStub.stubbedResult = .success(artists)
+
+        var capturedResult: Result<[Artist], ListViewError>!
+        sut.load { result in
+            capturedResult = result
+        }
+
+        XCTAssertEqual(capturedResult, .success(artists))
+        XCTAssertEqual(sut.allIds(), [1, 2, 4, 8])
+        XCTAssertEqual(sut.favoriteIds(), [1, 4])
+    }
 }

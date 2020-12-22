@@ -1,4 +1,5 @@
 import ArtistHubCore
+import Foundation
 
 final class ListViewRepository: ListViewRepositoryType {
 
@@ -13,6 +14,8 @@ final class ListViewRepository: ListViewRepositoryType {
     }
 
     // MARK: - ListViewRepositoryType
+
+    private(set) var data: [Int: Artist] = [:]
 
     func load(with completion: @escaping (Result<[Artist], ListViewError>) -> Void) {
         artistListService.getArtistList { [persistentClient] result in
@@ -32,11 +35,28 @@ final class ListViewRepository: ListViewRepositoryType {
                     return .success(updatedObjects)
                 }
 
+            if let data = try? mappedResult.get() {
+                self.data = Dictionary(uniqueKeysWithValues: data.map { ($0.id, $0) } )
+            }
+
             completion(mappedResult)
         }
     }
 
     func update(_ artist: Artist) -> Bool {
-        (try? persistentClient.saveOrUpdate(object: artist).get()) != nil
+        if (try? persistentClient.saveOrUpdate(object: artist).get()) != nil {
+            data[artist.id] = artist
+            return true
+        }
+
+        return false
+    }
+
+    func allIds() -> [Int] {
+        data.values.sorted { $0.id < $1.id }.map { $0.id }
+    }
+
+    func favoriteIds() -> [Int] {
+        data.values.sorted { $0.id < $1.id }.filter { $0.isFavorite }.map { $0.id }
     }
 }

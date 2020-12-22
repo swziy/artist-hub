@@ -168,6 +168,7 @@
 		C6F4DA38DC0833B5B59B0699 /* ImageManagerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DEAAE8CEF163CE66C5EF /* ImageManagerSpy.swift */; };
 		C6F4DAC78D1BCC1B885A0CE2 /* PersistentContainerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D9F7A7CF21390E958DE3 /* PersistentContainerFactoryTests.swift */; };
 		C6F4DB21B110C4B24C9C1A9E /* ListViewRepositoryFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D1C4638D9A6967DD424C /* ListViewRepositoryFactoryTests.swift */; };
+		C6F4DBA39B363EC3EB64FBB7 /* XCTestCase+LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4D5D987FAAEB04CEBEB7A /* XCTestCase+LoadView.swift */; };
 		C6F4DBD996DB2C4B5D612D63 /* ListViewRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DB9ADEEA5EE8C740470F /* ListViewRepositorySpy.swift */; };
 		C6F4DBF8D760E41CD9226460 /* PersistenceClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DCFFD6179C451BB40D4D /* PersistenceClientStub.swift */; };
 		C6F4DC2A9B29108C3B5A0492 /* NetworkTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4DBFE6701DEBADA7C78C6 /* NetworkTaskType.swift */; };
@@ -396,6 +397,7 @@
 		C6F4D4CE1FD7A0557922AD69 /* ListViewStatePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewStatePresenter.swift; sourceTree = "<group>"; };
 		C6F4D550787314095C9D1F4F /* ListViewRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewRepository.swift; sourceTree = "<group>"; };
 		C6F4D57BA247054B0D606F1B /* ImageServiceSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceSpy.swift; sourceTree = "<group>"; };
+		C6F4D5D987FAAEB04CEBEB7A /* XCTestCase+LoadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+LoadView.swift"; sourceTree = "<group>"; };
 		C6F4D5F6FAF2294EB5BB3640 /* ListViewRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewRepositoryTests.swift; sourceTree = "<group>"; };
 		C6F4D660D15BC5FEAEB37C80 /* ImageCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
 		C6F4D6D4F3D6C0366D598393 /* ImageServiceFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceFactoryTests.swift; sourceTree = "<group>"; };
@@ -1571,6 +1573,7 @@
 			isa = PBXGroup;
 			children = (
 				C6F4D2D7DFA3145E6DF3FAF9 /* UIViewController+LoadView.swift */,
+				C6F4D5D987FAAEB04CEBEB7A /* XCTestCase+LoadView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2006,6 +2009,7 @@
 				C6F4D4716075FFDBDD3D38C4 /* PersistenceClientStub.swift in Sources */,
 				C6F4D9D30B4908D3E21A4F4A /* UIViewController+LoadView.swift in Sources */,
 				C6F4DBD996DB2C4B5D612D63 /* ListViewRepositorySpy.swift in Sources */,
+				C6F4DBA39B363EC3EB64FBB7 /* XCTestCase+LoadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

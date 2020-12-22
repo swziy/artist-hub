@@ -21,7 +21,7 @@ final class ListViewController: UIViewController, ListViewControllerType {
 
     init(listViewRepository: ListViewRepositoryType, imageManager: ImageManagerType) {
         self.listViewRepository = listViewRepository
-        self.listViewDelegate = ListViewDelegate(imageManager: imageManager)
+        self.listViewDelegate = ListViewDelegate(listViewRepository: listViewRepository, imageManager: imageManager)
         super.init(nibName: nil, bundle: nil)
     }
 

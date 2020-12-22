@@ -6,11 +6,13 @@ final class ListViewDelegate: NSObject, UICollectionViewDelegate {
     weak var collectionView: UICollectionView?
     weak var listViewDataSource: ListViewDataSource?
 
+    private let listViewRepository: ListViewRepositoryType
     private let imageManager: ImageManagerType
 
     // MARK: - Initialization
 
-    init(imageManager: ImageManagerType) {
+    init(listViewRepository: ListViewRepositoryType, imageManager: ImageManagerType) {
+        self.listViewRepository = listViewRepository
         self.imageManager = imageManager
     }
 
@@ -21,7 +23,7 @@ final class ListViewDelegate: NSObject, UICollectionViewDelegate {
             return
         }
 
-        guard let item = listViewDataSource?.data[identifier] else {
+        guard let item = listViewRepository.data[identifier] else {
             return
         }
 
@@ -45,7 +47,7 @@ final class ListViewDelegate: NSObject, UICollectionViewDelegate {
             return
         }
 
-        guard let item = listViewDataSource?.data[identifier] else {
+        guard let item = listViewRepository.data[identifier] else {
             return
         }
 

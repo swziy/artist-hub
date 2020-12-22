@@ -5,7 +5,7 @@ final class ListViewDataSource {
 
     private(set) lazy var dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) {
         [unowned self] (collectionView, indexPath, identifier) -> UICollectionViewCell? in
-        guard let model = self.data[identifier] else {
+        guard let model = self.listViewRepository.data[identifier] else {
             return nil
         }
 
@@ -26,8 +26,6 @@ final class ListViewDataSource {
         return cell
     }
 
-    private(set) var data: [Int: Artist] = [:]
-
     private var selectedTab: Int = 0
     private let collectionView: UICollectionView
     private let listViewRepository: ListViewRepositoryType
@@ -47,8 +45,6 @@ final class ListViewDataSource {
     }
 
     func applyChange(with data: [Artist]) {
-        self.data = Dictionary(uniqueKeysWithValues: data.map { ($0.id, $0) } )
-
         var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
         snapshot.appendSections([.main])
         snapshot.appendItems(data.map { $0.id } )
@@ -59,7 +55,7 @@ final class ListViewDataSource {
 
     @objc private func didChangeSegmentedControl(sender: UISegmentedControl) {
         selectedTab = sender.selectedSegmentIndex
-        let ids = sender.selectedSegmentIndex == 0 ? allIds() : favoriteIds()
+        let ids = sender.selectedSegmentIndex == 0 ? listViewRepository.allIds() : listViewRepository.favoriteIds()
         animatedDifference(with: ids)
     }
 
@@ -73,7 +69,7 @@ final class ListViewDataSource {
             return
         }
 
-        guard let item = data[identifier] else {
+        guard let item = listViewRepository.data[identifier] else {
             return
         }
 
@@ -82,14 +78,12 @@ final class ListViewDataSource {
             return
         }
 
-        data[identifier] = copy
-
         UIView.transition(with: sender, duration: 0.2, options: .transitionCrossDissolve) {
             sender.isSelected = copy.isFavorite
         }
 
         if selectedTab == 1 {
-            animatedDifference(with: favoriteIds())
+            animatedDifference(with: listViewRepository.favoriteIds())
         }
     }
 
@@ -111,14 +105,6 @@ final class ListViewDataSource {
 
             return header
         }
-    }
-
-    private func allIds() -> [Int] {
-        data.values.sorted { $0.id < $1.id }.map { $0.id }
-    }
-
-    private func favoriteIds() -> [Int] {
-        data.values.sorted { $0.id < $1.id }.filter { $0.isFavorite }.map { $0.id }
     }
 
     private func animatedDifference(with ids: [Int]) {

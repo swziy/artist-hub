@@ -107,8 +107,10 @@ final class ListViewCell: UICollectionViewCell {
             followersLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12.0),
             followersLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12.0),
 
-            favouriteButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12.0),
-            favouriteButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12.0)
+            favouriteButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            favouriteButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -1.0),
+            favouriteButton.widthAnchor.constraint(equalToConstant: 44.0),
+            favouriteButton.heightAnchor.constraint(equalToConstant: 44.0)
         ])
     }
 

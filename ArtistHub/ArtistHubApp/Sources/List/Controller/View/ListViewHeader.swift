@@ -1,6 +1,6 @@
 import UIKit
 
-class ListViewHeader: UICollectionViewCell {
+final class ListViewHeader: UICollectionViewCell {
 
     let segmentedControl = UISegmentedControl(style: .init {
         $0.insertSegment(withTitle: "All", at: 0, animated: false)

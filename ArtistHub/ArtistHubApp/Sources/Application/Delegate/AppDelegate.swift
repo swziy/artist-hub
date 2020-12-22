@@ -1,7 +1,7 @@
 import ArtistHubUserInterface
 import UIKit
 
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var router: ApplicationRouterType
     var window: UIWindow?
@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let window = window {
             router.routeToMainScreen(in: window)
         }
-        
+
         return true
     }
 }

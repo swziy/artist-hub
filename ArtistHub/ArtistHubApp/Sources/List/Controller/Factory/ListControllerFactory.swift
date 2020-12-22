@@ -1,7 +1,7 @@
 import ArtistHubCore
 import UIKit
 
-class ListControllerFactory: ListControllerFactoryType {
+final class ListControllerFactory: ListControllerFactoryType {
 
     // MARK: - ListControllerFactoryType
 

@@ -1,6 +1,6 @@
 import UIKit
 
-class ImageService: ImageServiceType {
+final class ImageService: ImageServiceType {
 
     private let networkClient: NetworkClientType
     private let completionDispatcher: DispatcherType

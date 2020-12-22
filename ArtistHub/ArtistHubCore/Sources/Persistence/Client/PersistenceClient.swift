@@ -1,6 +1,6 @@
 import CoreData
 
-class PersistenceClient: PersistenceClientType {
+final class PersistenceClient: PersistenceClientType {
 
     private let containerFactory: PersistentContainerFactoryType
     private lazy var container = try? containerFactory.makePersistentContainer().get()

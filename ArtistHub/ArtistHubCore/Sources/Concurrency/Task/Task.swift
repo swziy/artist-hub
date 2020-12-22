@@ -1,4 +1,4 @@
-public class Task<T> {
+public final class Task<T> {
 
     let id: UUID
     let execution: () -> T

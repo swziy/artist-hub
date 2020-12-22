@@ -95,4 +95,23 @@ class ListViewControllerTests: XCTestCase {
         XCTAssertEqual(cell.favouriteButton.isSelected, true)
         XCTAssertEqual(cell.descriptionLabel.text, Artist.testData(with: 2, favorite: true).description)
     }
+
+    func test_whenCellIsDisplayed_shouldStartImageDownload() {
+        listViewRepositorySpy.stubbedLoadResult = .success(.testData)
+        imageManagerSpy.stubbedResult = .success(UIImage.testData)
+        _ = sut.loadView(ListView.self)
+
+        XCTAssertEqual(imageManagerSpy.invokedGetImageWithUrl.count, 5)
+    }
+
+    func test_whenCellEndsDisplaying_shouldStartImageDownload() {
+        listViewRepositorySpy.stubbedLoadResult = .success(.testData)
+        imageManagerSpy.stubbedResult = .success(UIImage.testData)
+        let view = delayedLoadView(ListView.self, for: sut)
+
+        let cell = view.collectionView.visibleCells[0] as! ListViewCell
+        view.collectionView.delegate?.collectionView?(view.collectionView, didEndDisplaying: cell, forItemAt: IndexPath(row: 0, section: 0))
+
+        XCTAssertEqual(imageManagerSpy.invokedCancelImageWithUrl.count, 1)
+    }
 }
